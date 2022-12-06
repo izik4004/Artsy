@@ -2,6 +2,7 @@ import FeaturedImage3 from "../assets/FeaturedProduct1.png";
 import FeaturedImage2 from "../assets/FeaturedProduct2.png";
 import FeaturedImage1 from "../assets/FeaturedProduct3.png";
 import UpcomingImage from "../assets/Upcomingsection.png";
+import CreatorsImage from "../assets/CreatorsImage1.png"
 
 export const nav = [
   { name: "Home", href: "/" },
@@ -71,3 +72,21 @@ export const footer = {
     {  name: "Lagos, Nigeria", },
   ],
 };
+
+export const explore = [
+    { name: "Explore marketplace", href: "/#" },
+    { name: "See Auctions", href: "/#" },
+]
+
+export const topCreators = {
+    title: "TOP CREATORS OF THE WEEK",
+    specialty: [
+        { name: "Editorials"},
+        { name: "Fashion"},
+        { name: "Lifestyle"},
+        { name: "Blueprints"},
+      ],
+    subtitle:
+      "Everything always looked better in black and white. Everything always  as if it were the first time; there’s always more people in a black and white photograph. It just makes it seem that there were more people at a gig, more people at a football match, than with colour photography. Everything looks more exciting. Jack Lowden",
+    image: CreatorsImage,
+  };
