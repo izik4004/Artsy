@@ -24,6 +24,7 @@ module.exports = {
       backgroundImage: {
         upcoming: "url('/src/assets/Upcomingsection.png')",
         // cta: "url('/src/assets/img/cta/bg.svg')",
+        
       },
     },
   },

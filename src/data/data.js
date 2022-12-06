@@ -1,6 +1,6 @@
-import FeaturedImage1 from "../assets/FeaturedProduct1.png";
+import FeaturedImage3 from "../assets/FeaturedProduct1.png";
 import FeaturedImage2 from "../assets/FeaturedProduct2.png";
-import FeaturedImage3 from "../assets/FeaturedProduct3.png";
+import FeaturedImage1 from "../assets/FeaturedProduct3.png";
 import UpcomingImage from "../assets/Upcomingsection.png";
 
 export const nav = [

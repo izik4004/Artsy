@@ -12,6 +12,7 @@ function App() {
       <Nav/>
       {/* <Header/> */}
         <Homepage/>
+      
         <Newsletter/>
       <Footer/>
     </div>
