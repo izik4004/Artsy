@@ -11,7 +11,7 @@ import CollectionCard from "../../components/CollectionCard";
 
 export const ProductDetail = () => {
   return (
-    <section className="container mx-auto ">
+    <section className="container mx-auto mb-20">
       <div className="my-14">hi</div>
       <div className="flex border my-10">
         <div className="border-r w-1/2">
@@ -76,6 +76,11 @@ export const ProductDetail = () => {
       <section className="my-10">
         <CollectionCard />
       </section>
+      <div className="flex justify-center">
+        <button className="customized_button border py-2 px-8 rounded-lg">
+          Explore all
+        </button>
+      </div>
     </section>
   );
 };

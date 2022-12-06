@@ -20,6 +20,7 @@ module.exports = {
         accent: '#FF7235',
         accentHover: '#e05216',
         grey: '#F5F5F5',
+        
       },
       backgroundImage: {
         upcoming: "url('/src/assets/Upcomingsection.png')",
