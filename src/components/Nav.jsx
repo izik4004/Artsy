@@ -6,23 +6,21 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
 const Nav = () => {
-    let activeStyle = {
-        textDecoration: "underline",
-      };
-    
-    //   let activeClassName = "underline";
+  let activeStyle = {
+    textDecoration: "underline",
+  };
+
+  //   let activeClassName = "underline";
   return (
     <div className="flex justify-between py-6 items-center container mx-auto">
       <div className="flex text-2xl font-semibold">ARTSY.</div>
       <div className="flex gap-16 justify-between">
         {nav.map((item, index) => (
-          <NavLink 
-          to={item.href} 
-          key={index} 
-          className="cursor-pointer"
-          style={({ isActive }) =>
-              isActive ? activeStyle : undefined
-            }
+          <NavLink
+            to={item.href}
+            key={index}
+            className="cursor-pointer"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             {item.name}
           </NavLink>

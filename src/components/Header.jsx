@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { header } from "../data";
-import { HiMenuAlt4} from "react-icons/hi";
-import {MdClose} from "react-icons/md"
+import { HiMenuAlt4 } from "react-icons/hi";
+import { MdClose } from "react-icons/md";
 import MobileNav from "../components/MobileNav";
 import Nav from "../components/Nav";
 
@@ -25,20 +25,20 @@ const Header = () => {
   transition-all z-10`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <a href="#"
-        data-aos='fade-down'
-        data-aos-delay='1200'
-        >
+        <a href="#" data-aos="fade-down" data-aos-delay="1200">
           <img src={logo} alt="" />
         </a>
-        <div className="hidden lg:flex"
-        data-aos='fade-down'
-        data-aos-delay='1200'>
+        <div
+          className="hidden lg:flex"
+          data-aos="fade-down"
+          data-aos-delay="1200"
+        >
           <Nav />
         </div>
-        <button className="btn btn-sm btn-outline hidden lg:flex"
-        data-aos='fade-down'
-        data-aos-delay='1400'
+        <button
+          className="btn btn-sm btn-outline hidden lg:flex"
+          data-aos="fade-down"
+          data-aos-delay="1400"
         >
           {btnText}
         </button>

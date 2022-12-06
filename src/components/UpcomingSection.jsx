@@ -18,7 +18,7 @@ const UpcomingSection = () => {
           <img src={image} alt="" srcset="" />
           <div className="flex gap-4 px-8 absolute bottom-28 text-white justify-between">
             <div className="flex items-center">
-                <h3 className="text-4xl">01</h3>
+              <h3 className="text-4xl">01</h3>
             </div>
             <div>
               <h3 className="text-2xl">{pretitle}</h3>
@@ -26,7 +26,9 @@ const UpcomingSection = () => {
             </div>
             <div className="flex gap-4">
               <h3>see more</h3>
-              <a href="#/" className="text-sm">set a reminder</a>
+              <a href="#/" className="text-sm">
+                set a reminder
+              </a>
               {/* <button className="px-12 border rounded-lg text-sm">
                 Set a reminder
               </button> */}
@@ -36,8 +38,11 @@ const UpcomingSection = () => {
         <div className="flex justify-between">
           <div></div>
           <div className="flex gap-6">
-            <MdOutlineKeyboardArrowLeft size={20}/>
-            <MdOutlineKeyboardArrowRight  size={20} className="border rounded-full "/>
+            <MdOutlineKeyboardArrowLeft size={20} />
+            <MdOutlineKeyboardArrowRight
+              size={20}
+              className="border rounded-full "
+            />
           </div>
         </div>
       </div>

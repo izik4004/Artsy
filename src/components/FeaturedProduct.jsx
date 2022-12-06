@@ -22,7 +22,7 @@ const FeaturedProduct = () => {
                 src={feature1.image}
                 alt="Guy"
               />
-            
+
               <img
                 className="inline-block h-10 w-10 rounded-full object-cover ring-2 ring-white"
                 src={feature1.image}
@@ -47,7 +47,7 @@ const FeaturedProduct = () => {
         </div>
       </Featured>
       <Featured>
-      <div className="w-1/2 order-2">
+        <div className="w-1/2 order-2">
           <img src={feature2.image} alt="" />
         </div>
         <div className="flex flex-col justify-between w-1/2">
@@ -60,7 +60,7 @@ const FeaturedProduct = () => {
                 src={feature2.image}
                 alt="Guy"
               />
-            
+
               <img
                 className="inline-block h-10 w-10 rounded-full object-cover ring-2 ring-white"
                 src={feature1.image}
@@ -85,7 +85,7 @@ const FeaturedProduct = () => {
         </div>
       </Featured>
       <Featured className="">
-      <div className="w-1/2">
+        <div className="w-1/2">
           <img src={feature3.image} alt="" />
         </div>
         <div className="flex flex-col justify-between w-1/2">
@@ -98,7 +98,7 @@ const FeaturedProduct = () => {
                 src={feature3.image}
                 alt="Guy"
               />
-            
+
               <img
                 className="inline-block h-10 w-10 rounded-full object-cover ring-2 ring-white"
                 src={feature1.image}
