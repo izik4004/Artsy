@@ -1,5 +1,5 @@
 import "./App.css";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 // import Header from './components/Header';
 import Nav from "./components/Nav";
 // import Newsletter from './components/Newsletter';
@@ -10,14 +10,15 @@ import { ProductDetail } from "./pages/marketplace/ProductDetail";
 function App() {
   return (
     <div className="">
-      <Nav />
+     
       <Router>
+      <Nav />
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route path="/product_detail" element={<ProductDetail />} />
         </Routes>
       </Router>
-      <Footer />
+      
     </div>
   );
 }

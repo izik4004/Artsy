@@ -92,7 +92,7 @@ const FeaturedProduct = () => {
           <h3 className="text-3xl font-semibold">{feature3.title}</h3>
           <p className="text-xl">{feature3.subtitle}</p>
           <div className="flex justify-between items-center">
-            <div class="flex -space-x-2">
+            <div className="flex -space-x-2">
               <img
                 className="inline-block h-10 w-10 rounded-full object-cover ring-2 ring-white"
                 src={feature3.image}

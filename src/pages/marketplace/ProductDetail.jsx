@@ -4,6 +4,7 @@ import {AiOutlinePlus} from "react-icons/ai"
 import {IoIosArrowDown} from "react-icons/io"
 import {MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight} from "react-icons/md"
 import image from "../../assets/productDetail.png"
+import CollectionCard from "../../components/CollectionCard"
 
 export const ProductDetail = () => {
   return (
@@ -53,18 +54,22 @@ export const ProductDetail = () => {
 
            
         </div>
-        <section className="my-20  py-4 px-4 rounded-lg shadow">
+        <section className="my-20  py-4 px-4 rounded-lg shadow-xl drop-shadow-xl">
                 <div className="flex justify-between items-center">
                     <h3>Explore more from this collections</h3>
                     <div className="flex justify-between gap-6">
-                        <div className="border p-2 rounded-full">
-                        <MdOutlineKeyboardArrowLeft size={20}/>
+                        <div className="border p-1 rounded-full">
+                        <MdOutlineKeyboardArrowLeft size={32}/>
                         </div>
-                        <div className="border p-2 rounded-full">
-                            <MdOutlineKeyboardArrowRight size={20}/>
+                        <div className="border p-1 rounded-full">
+                            <MdOutlineKeyboardArrowRight size={32}/>
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section className="my-10">
+                <CollectionCard/>
             </section>
     </section>
   )
