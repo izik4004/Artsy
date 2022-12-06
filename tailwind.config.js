@@ -13,7 +13,19 @@ module.exports = {
       lg: '1024px',
       xl: '1170px',
     },
-   
+    extend: {
+      colors: {
+        dark: '#292830',
+        light: '#BDBDBD',
+        accent: '#FF7235',
+        accentHover: '#e05216',
+        grey: '#F5F5F5',
+      },
+      backgroundImage: {
+        upcoming: "url('/src/assets/Upcomingsection.png')",
+        // cta: "url('/src/assets/img/cta/bg.svg')",
+      },
+    },
   },
   plugins: [],
 };

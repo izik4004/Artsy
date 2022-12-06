@@ -12,19 +12,19 @@ const Footer = () => {
         </div>
         <div className="">
         {footerLink1.map((item) => (
-             <div className="py-4">{item.name}</div>
+             <div className="py-2">{item.name}</div>
         ))}
         </div>
 
         <div className="">
         {footerLink2.map((item) => (
-             <div className="py-4">{item.name}</div>
+             <div className="py-2">{item.name}</div>
         ))}
         </div>
        
         <div className="">
         {footerLink3.map((item) => (
-             <div className="py-4">{item.name}</div>
+             <div className="py-2">{item.name}</div>
         ))}
         </div>      
       </div>
