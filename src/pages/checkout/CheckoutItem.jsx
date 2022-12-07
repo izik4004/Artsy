@@ -2,6 +2,7 @@ import React from 'react'
 import image from "../../assets/marketplace.png"
 import {RiSubtractFill} from "react-icons/ri"
 import {AiOutlinePlus} from "react-icons/ai"
+import {ImCancelCircle} from "react-icons/im"
 
 const CheckoutItem = () => {
   return (
@@ -22,7 +23,7 @@ const CheckoutItem = () => {
             </div>
         </div>
         <div className='flex justify-between flex-col items-center'>
-            <span className='border rounded-full  px-2'>x</span>
+            <ImCancelCircle size={24}/>
             <h4>$39.50</h4>
         </div>
     </div>

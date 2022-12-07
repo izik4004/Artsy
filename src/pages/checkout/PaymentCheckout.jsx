@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Sum from "../../components/Sum";
 import CheckoutItem from "./CheckoutItem";
+import PaymentDetails from "./PaymentDetails";
 import ShippingDetails from "./ShippingDetails";
+import ShoppingCart from "./ShoppingCart";
 
 const PaymentCheckout = () => {
   const [openTab, setOpenTab] = useState(1);
@@ -37,7 +39,7 @@ const PaymentCheckout = () => {
 
           <a
             href="#/"
-            onClick={() => setOpenTab(2)}
+            onClick={() => setOpenTab(3)}
             className={`sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start 
           ${
             openTab === 3
@@ -51,27 +53,14 @@ const PaymentCheckout = () => {
       </div>
 
       {openTab === 1 && (
-        <>
-          <CheckoutItem />
-          <div className="flex py-10">
-            <div className="w-1/2">
-              <button className="py-4 px-20 text-white bg-[#3341C1]">
-                Proceed to checkout
-              </button>
-              <h5 className="text-blue px-20 py-6 underline">
-                Continue shopping
-              </h5>
-            </div>
-            <div className="w-1/2">
-            <Sum/>
-            </div>
-            
-          </div>
-        </>
+        <ShoppingCart/>
       )}
 
       {openTab === 2 && 
         <ShippingDetails/>
+      }
+       {openTab === 3 && 
+        <PaymentDetails/>
       }
     </section>
   );
