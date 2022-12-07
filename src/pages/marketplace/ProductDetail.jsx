@@ -13,12 +13,12 @@ export const ProductDetail = () => {
   return (
     <section className="container mx-auto mb-20">
       <div className="my-14">hi</div>
-      <div className="flex border my-10">
-        <div className="border-r w-1/2">
-          <img src={image} alt="" className="px-4 py-10" />
+      <div className="flex border">
+        <div className="border-r w-1/2 ;">
+          <img src={image} alt="" className="p-4 block" />
         </div>
-        <div className="flex flex-col w-1/2 ">
-          <div className="border-b py-14 px-6 flex justify-between items-center">
+        <div className="flex flex-col w-1/2">
+          <div className="border-b py-10 px-6 flex justify-between items-center">
             <h3 className="text-3xl font-semibold">Boolean Egyptian</h3>
             <div>
               <h5 className="text-lg">0.09</h5>
@@ -45,15 +45,15 @@ export const ProductDetail = () => {
               </div>
             </div>
           </div>
-          <div className="border-b px-6 py-10 flex justify-between items-center cursor-pointer">
+          <div className="border-b px-6 py-8 flex justify-between items-center cursor-pointer">
             <h3 className="text-xl">Description</h3>
             <IoIosArrowDown size={24} />
           </div>
-          <div className="border-b px-6 py-10 flex justify-between items-center cursor-pointer">
+          <div className="border-b px-6 py-8 flex justify-between items-center cursor-pointer">
             <h3 className="text-xl">Description</h3>
             <IoIosArrowDown size={24} />
           </div>
-          <div className="border-b px-6 py-10 flex justify-between items-center cursor-pointer">
+          <div className="border-b px-6 py-8 flex justify-between items-center cursor-pointer">
             <h3 className="text-xl">Description</h3>
             <IoIosArrowDown size={24} />
           </div>
@@ -77,7 +77,7 @@ export const ProductDetail = () => {
         <CollectionCard />
       </section>
       <div className="flex justify-center">
-        <button className="customized_button border py-2 px-8 rounded-lg">
+        <button className="border text-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-2 px-8 rounded-lg">
           Explore all
         </button>
       </div>

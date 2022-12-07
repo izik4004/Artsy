@@ -38,11 +38,15 @@ const UpcomingSection = () => {
         <div className="flex justify-between">
           <div></div>
           <div className="flex gap-6">
+            <div className="border rounded-full p-3">
             <MdOutlineKeyboardArrowLeft size={20} />
+            </div>
+            <div className="border rounded-full p-3">
             <MdOutlineKeyboardArrowRight
               size={20}
-              className="border rounded-full "
+             
             />
+            </div>
           </div>
         </div>
       </div>

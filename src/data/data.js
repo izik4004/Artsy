@@ -6,7 +6,7 @@ import CreatorsImage from "../assets/CreatorsImage1.png"
 
 export const nav = [
   { name: "Home", href: "/" },
-  { name: "Marketplace", href: "/products" },
+  { name: "Marketplace", href: "/marketplace" },
   { name: "Auctions", href: "/auctions" },
   { name: "Drop", href: "/drop" },
 ];

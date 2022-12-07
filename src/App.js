@@ -6,6 +6,8 @@ import Nav from "./components/Nav";
 import Homepage from "./pages/homepage/Index";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ProductDetail } from "./pages/marketplace/ProductDetail";
+import MarketPlace from "./pages/marketplace/MarketPlace";
+import PaymentCheckout from "./pages/checkout/PaymentCheckout";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route path="/product_detail" element={<ProductDetail />} />
+          <Route path="/marketplace" element={<MarketPlace/>} />
+          <Route path="/paymentcheckout" element={<PaymentCheckout/>} />
         </Routes>
       </Router>
       
