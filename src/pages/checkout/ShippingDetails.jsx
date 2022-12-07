@@ -1,8 +1,14 @@
 import React from 'react'
+import CheckoutItem from './CheckoutItem'
 
 const ShippingDetails = () => {
   return (
-    <div>ShippingDetails</div>
+    <section className='container mx-auto flex'>
+        <div className='w-1/2'>1</div>
+        <div className='w-1/2'>
+            <CheckoutItem/>
+        </div>
+    </section>
   )
 }
 

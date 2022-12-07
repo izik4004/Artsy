@@ -14,7 +14,7 @@ const CheckoutItem = () => {
                 <h4>Philomena 22</h4>
                 <h5>clarrrr</h5>
                 <h5>size: 200hh</h5>
-                <p className="flex gap-4 py-6 items-center">
+                <p className="flex gap-4  items-center">
               <RiSubtractFill className="text-2xl cursor-pointer" />
               <span className="text-xl">1</span>
               <AiOutlinePlus className="text-xl cursor-pointer" />
@@ -22,7 +22,7 @@ const CheckoutItem = () => {
             </div>
         </div>
         <div className='flex justify-between flex-col items-center'>
-            <span>x</span>
+            <span className='border rounded-full  px-2'>x</span>
             <h4>$39.50</h4>
         </div>
     </div>
