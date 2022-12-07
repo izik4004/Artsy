@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Sum from "../../components/Sum";
 import CheckoutItem from "./CheckoutItem";
 import ShippingDetails from "./ShippingDetails";
 
@@ -61,20 +62,10 @@ const PaymentCheckout = () => {
                 Continue shopping
               </h5>
             </div>
-            <div className="flex flex-col w-1/2">
-              <div className="flex justify-between">
-                <span>Products in cart:</span>
-                <span>34678</span>
-              </div>
-              <div className="flex justify-between py-4">
-                <span>Shopping:</span>
-                <span>34678</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Total:</span>
-                <span>34678</span>
-              </div>
+            <div className="w-1/2">
+            <Sum/>
             </div>
+            
           </div>
         </>
       )}

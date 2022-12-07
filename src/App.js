@@ -25,6 +25,17 @@ const Layout = () => {
     </div>
   )
 }
+
+const CustomLayout = () => {
+  return (
+    <div className="app">
+      <Nav/>
+      <Outlet/>
+    </div>
+  )
+}
+
+
 const router = createBrowserRouter([
   {
     path:"/",
@@ -42,17 +53,26 @@ const router = createBrowserRouter([
         path: "/products/:id",
         element: <ProductDetail/>,
       },
+     
+      
+    ]
+  },
+  {
+    path:"/",
+    element: <CustomLayout/>,
+    children: [
       {
         path: "/checkout",
         element: <PaymentCheckout/>,
       },
-      {
-        path: "/",
-        // element: <ErrorPage />,
-        errorElement: <ErrorPage/>,
-      },
     ]
   },
+ 
+  // {
+  //   path: "/checkout",
+  //   // element: <ErrorPage />,
+  //   errorElement: <ErrorPage/>,
+  // },
  
 ]);
 
