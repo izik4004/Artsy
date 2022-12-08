@@ -2,6 +2,7 @@ import React from "react";
 import {category, price} from "../../data/data"
 import { ImEqualizer } from "react-icons/im";
 import { RxCaretUp, RxCaretDown } from "react-icons/rx";
+import MarketItem from "../../components/MarketItem";
 
 const MarketPlace = () => {
   return (
@@ -23,7 +24,7 @@ const MarketPlace = () => {
             <ImEqualizer size={24} />
             <span >Filter</span>
           </div>
-          <div className="py-6 flex justify-between items-center">
+          <div className="py-8 flex justify-between items-center">
             <span className="font-semibold">By category</span>
             <RxCaretUp size={24} />
             {/* <RxCaretDown/> */}
@@ -61,7 +62,11 @@ const MarketPlace = () => {
             {/* <RxCaretDown/> */}
           </div>
         </div>
-        <div className="w-3/4">nnnn</div>
+        <div className="w-3/4">
+          <div className="w-1/3">
+              <MarketItem/>
+          </div>
+        </div>
       </div>
     </section>
   );

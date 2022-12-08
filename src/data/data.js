@@ -3,6 +3,10 @@ import FeaturedImage2 from "../assets/FeaturedProduct2.png";
 import FeaturedImage1 from "../assets/FeaturedProduct3.png";
 import UpcomingImage from "../assets/Upcomingsection.png";
 import CreatorsImage from "../assets/CreatorsImage1.png"
+import Product1 from "../assets/item1.png"
+
+
+
 
 export const nav = [
   { name: "Home", href: "/" },
@@ -94,3 +98,51 @@ export const topCreators = {
   export const category = ["Editorial", "Fashion", "Optics", "Arts & Museum", "Nature"  ];
 
   export const price = ["All", "Below $100,00", "$100.00 - $150.00", "$150.00 - $200.00", "Above $200.00"  ];
+
+  export const products = [
+    {
+        name: "PHILOMENA '22",
+        price: "$3.90",
+        image: Product1
+    },
+    {
+        name: "BOOLEAN EGYPTIAN",
+        price: "$3.90",
+        image: Product2
+    },
+    {
+        name: "BLANC",
+        price: "$3.90",
+        image: Product3
+    },
+    {
+        name: "ELLIPSIA",
+        price: "$3.90",
+        image: Product4
+    },
+    {
+        name: "THE LAWMAKERS",
+        price: "$3.90",
+        image: Product5
+    },
+    {
+        name: "VEIL",
+        price: "$3.90",
+        image: Product6
+    },
+    {
+        name: "ALTERNATING",
+        price: "$3.90",
+        image: Product7
+    },
+    {
+        name: "ROSEMARY '22",
+        price: "$3.90",
+        image: Product8
+    },
+    {
+        name: "BEVERLY",
+        price: "$3.90",
+        image: Product9
+    },
+  ]
