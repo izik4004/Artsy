@@ -45,10 +45,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Homepage/>,
       },
-      {
-        path: "/marketplace",
-        element: <MarketPlace/>,
-      },
+    
       {
         path: "/products/:id",
         element: <ProductDetail/>,
@@ -61,6 +58,10 @@ const router = createBrowserRouter([
     path:"/",
     element: <CustomLayout/>,
     children: [
+      {
+        path: "/marketplace",
+        element: <MarketPlace/>,
+      },
       {
         path: "/checkout",
         element: <PaymentCheckout/>,

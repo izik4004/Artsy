@@ -90,3 +90,7 @@ export const topCreators = {
       "Everything always looked better in black and white. Everything always  as if it were the first time; there’s always more people in a black and white photograph. It just makes it seem that there were more people at a gig, more people at a football match, than with colour photography. Everything looks more exciting. Jack Lowden",
     image: CreatorsImage,
   };
+
+  export const category = ["Editorial", "Fashion", "Optics", "Arts & Museum", "Nature"  ];
+
+  export const price = ["All", "Below $100,00", "$100.00 - $150.00", "$150.00 - $200.00", "Above $200.00"  ];
