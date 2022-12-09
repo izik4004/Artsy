@@ -1,5 +1,5 @@
 import React from "react";
-import {category, price} from "../../data/data"
+import {category, price, products} from "../../data/data"
 import { ImEqualizer } from "react-icons/im";
 import { RxCaretUp, RxCaretDown } from "react-icons/rx";
 import MarketItem from "../../components/MarketItem";
@@ -7,22 +7,29 @@ import MarketItem from "../../components/MarketItem";
 const MarketPlace = () => {
   return (
     <section className="container mx-auto flex flex-col gap-10  py-20 mb-20">
-      <div className="flex gap-14">
-        <div className="w-1/4 py-4">
-          <input type="text" placeholder="Search" />
+      <div className="flex gap-14 items-center">
+        <div className="w-1/5 py-4">
+          <input type="text" placeholder="Search" className="border p-2 bg-gray-100 rounded-lg"/>
         </div>
-        <div className="w-3/4">
-          <div className="shadow-lg py-4 px-4">
-            <h4>See 1-6 of 15 results</h4>
+        <div className="w-4/5 px-4 ">
+          <div className="shadow-lg py-4 px-4 flex justify-between items-center">
+            <h4 className="">See 1-6 of 15 results</h4>
+            <span className="">
+            <select className="border  rounded-md py-2 px-4  ">buy
+              <option value="Orange" className="py-4">Sort by</option>
+              <option value="Radish">Radish</option>
+              <option value="Cherry">Cherry</option>
+            </select>
+          </span>
           </div>
         </div>
       </div>
 
       <div className="flex py-8 gap-14">
-        <div className="w-1/4">
-          <div className="flex gap-2 font-semibold  border-b-4 pb-4">
+        <div className="w-1/5">
+          <div className="flex gap-4 font-semibold  border-b-4 pb-4">
             <ImEqualizer size={24} />
-            <span >Filter</span>
+            <span className="text-xl">Filter</span>
           </div>
           <div className="py-8 flex justify-between items-center">
             <span className="font-semibold">By category</span>
@@ -62,12 +69,30 @@ const MarketPlace = () => {
             {/* <RxCaretDown/> */}
           </div>
         </div>
-        <div className="w-3/4">
-          <div className="w-1/3">
-              <MarketItem/>
+        <div className="w-4/5">
+          <div className="flex flex-wrap">
+            {products.map((item) => (
+              <div className="w-1/3 p-4">
+                <MarketItem
+                key={item.id}
+                image={item.image}
+                name={item.name}
+                price={item.price}
+                />
+                </div>
+            ))}
+              
           </div>
+         
         </div>
+
+       
       </div>
+      <div className="flex flex-col gap-2 py-6  items-center ">
+            <button className="py-4 px-20  border rounded-lg border-gray-700">
+              See more
+            </button>
+          </div>
     </section>
   );
 };

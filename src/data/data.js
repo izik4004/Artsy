@@ -4,6 +4,17 @@ import FeaturedImage1 from "../assets/FeaturedProduct3.png";
 import UpcomingImage from "../assets/Upcomingsection.png";
 import CreatorsImage from "../assets/CreatorsImage1.png"
 import Product1 from "../assets/item1.png"
+import Product2 from "../assets/item2.png"
+import Product3 from "../assets/item3.png"
+import Product4 from "../assets/item4.png"
+import Product5 from "../assets/item5.png"
+import Product6 from "../assets/item6.png"
+import Product7 from "../assets/item7.png"
+import Product8 from "../assets/item8.png"
+import Product9 from "../assets/item9.png"
+import Auction1 from "../assets/auction1.png"
+import Auction2 from "../assets/auction2.png"
+
 
 
 
@@ -101,48 +112,78 @@ export const topCreators = {
 
   export const products = [
     {
+        id:1,
         name: "PHILOMENA '22",
         price: "$3.90",
         image: Product1
     },
     {
+        id:2,
         name: "BOOLEAN EGYPTIAN",
         price: "$3.90",
         image: Product2
     },
     {
+        id:3,
         name: "BLANC",
         price: "$3.90",
         image: Product3
     },
     {
+        id:4,
         name: "ELLIPSIA",
         price: "$3.90",
         image: Product4
     },
     {
+        id:5,
         name: "THE LAWMAKERS",
         price: "$3.90",
         image: Product5
     },
     {
+        id:6,
         name: "VEIL",
         price: "$3.90",
         image: Product6
     },
     {
+        id:7,
         name: "ALTERNATING",
         price: "$3.90",
         image: Product7
     },
     {
+        id:8,
         name: "ROSEMARY '22",
         price: "$3.90",
         image: Product8
     },
     {
+        id:9,
         name: "BEVERLY",
         price: "$3.90",
         image: Product9
     },
+  ]
+
+  export const auction = [
+    {
+      id:1,
+      name: "Out of the box",
+      creator: "Dan Murray",
+      Highestbid: "0.57ETH",
+      currentbid: "0.987 ETH",
+      date: "12/08/22",
+      image: Auction1
+    },
+    {
+      id:2,
+      name: "Out of the box",
+      creator: "Dan Murray",
+      Highestbid: "0.57ETH",
+      currentbid: "0.987 ETH",
+      date: "12/08/22",
+      image:Auction2
+    }
   ]

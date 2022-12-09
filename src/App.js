@@ -13,6 +13,7 @@ import { ProductDetail } from "./pages/marketplace/ProductDetail";
 import MarketPlace from "./pages/marketplace/MarketPlace";
 import PaymentCheckout from "./pages/checkout/PaymentCheckout";
 import ErrorPage from "./pages/ErrorPage";
+import Auction from "./pages/auction/Auction";
 
 
 
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: "/marketplace",
         element: <MarketPlace/>,
+      },
+      {
+        path: "/auctions",
+        element: <Auction/>,
       },
       {
         path: "/checkout",

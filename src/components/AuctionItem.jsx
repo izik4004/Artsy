@@ -1,0 +1,43 @@
+import React from 'react'
+import {BsSuitHeart} from "react-icons/bs"
+
+const AuctionItem = (props) => {
+  return (
+    <div className=' w-1/2'>
+       <div className="border rounded-lg flex flex-col p-4">
+      <div className="flex justify-end">
+        <BsSuitHeart />
+      </div>
+      <div className="py-2 ">
+        <img src={props.image} alt="" className="" />
+      </div>
+      <div className="flex justify-between">
+        <h3>Sassy</h3>
+      </div>
+    </div>
+    <div>
+      <p className='flex gap-4 py-4'>
+        <span>Creator:</span>
+        <span>Dan Murray</span>
+      </p>
+      <p className='flex gap-4 py-2'>
+        <span>Date:</span>
+        <span>12/08/22</span>
+      </p>
+      <p className='flex gap-4 py-4'>
+        <span>Highest bid:</span>
+        <span>0.57 ETH</span>
+      </p>
+    </div>
+    <div className='flex justify-between bg-gray-100 p-4'>
+      <div className='flex flex-col gap-2 text-md'>
+        <span>Current bid</span>
+        <span>0.987 Eth</span>
+      </div>
+      <button className='bg-blue px-12 text-white '>Place bid</button>
+    </div>
+    </div>
+  )
+}
+
+export default AuctionItem
