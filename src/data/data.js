@@ -12,7 +12,7 @@ import Product6 from "../assets/item6.png"
 import Product7 from "../assets/item7.png"
 import Product8 from "../assets/item8.png"
 import Product9 from "../assets/item9.png"
-import Auction1 from "../assets/auction1.png"
+import Auction1 from "../assets/aution1.png"
 import Auction2 from "../assets/auction2.png"
 
 
@@ -180,9 +180,9 @@ export const topCreators = {
     {
       id:2,
       name: "Out of the box",
-      creator: "Dan Murray",
-      Highestbid: "0.57ETH",
-      currentbid: "0.987 ETH",
+      creator: "Jacob Banks",
+      Highestbid: "0.34ETH",
+      currentbid: "0.99 ETH",
       date: "12/08/22",
       image:Auction2
     }

@@ -3,36 +3,36 @@ import {BsSuitHeart} from "react-icons/bs"
 
 const AuctionItem = (props) => {
   return (
-    <div className=' w-1/2'>
-       <div className="border rounded-lg flex flex-col p-4">
-      <div className="flex justify-end">
+    <div className=' w-1/3'>
+       <div className="border rounded-lg flex flex-col py-4">
+      <div className="flex justify-end px-4 ">
         <BsSuitHeart />
       </div>
       <div className="py-2 ">
         <img src={props.image} alt="" className="" />
       </div>
       <div className="flex justify-between">
-        <h3>Sassy</h3>
+        <h3 className='text-2xl px-4 font-bold py-2'>{props.name}</h3>
       </div>
     </div>
     <div>
       <p className='flex gap-4 py-4'>
         <span>Creator:</span>
-        <span>Dan Murray</span>
+        <span>{props.creator}</span>
       </p>
       <p className='flex gap-4 py-2'>
         <span>Date:</span>
-        <span>12/08/22</span>
+        <span>{props.date}</span>
       </p>
       <p className='flex gap-4 py-4'>
         <span>Highest bid:</span>
-        <span>0.57 ETH</span>
+        <span>{props.highestbid}</span>
       </p>
     </div>
     <div className='flex justify-between bg-gray-100 p-4'>
       <div className='flex flex-col gap-2 text-md'>
         <span>Current bid</span>
-        <span>0.987 Eth</span>
+        <span>{props.currentbid}</span>
       </div>
       <button className='bg-blue px-12 text-white '>Place bid</button>
     </div>
