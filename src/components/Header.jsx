@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { header } from "../data";
+// import { header } from "../data";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import MobileNav from "../components/MobileNav";
@@ -8,7 +8,7 @@ import Nav from "../components/Nav";
 const Header = () => {
   const [mobileNav, setMobileNav] = useState(false);
   const [isActive, setIsActive] = useState(false);
-  const { logo, btnText } = header;
+  // const { logo, btnText } = header;
 
   //scroll event
   useEffect(() => {
@@ -25,8 +25,9 @@ const Header = () => {
   transition-all z-10`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <a href="#" data-aos="fade-down" data-aos-delay="1200">
-          <img src={logo} alt="" />
+        <a href="#/" data-aos="fade-down" data-aos-delay="1200">
+          <img src="fffff" alt="" />
+          
         </a>
         <div
           className="hidden lg:flex"
@@ -40,7 +41,7 @@ const Header = () => {
           data-aos="fade-down"
           data-aos-delay="1400"
         >
-          {btnText}
+          jlk;l;
         </button>
         <button className="lg:hidden" onClick={() => setMobileNav(!mobileNav)}>
           {mobileNav ? (

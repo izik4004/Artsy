@@ -1,6 +1,6 @@
 import "./App.css";
 import Footer from "./components/Footer";
-// import Header from './components/Header';
+import Header from './components/Header';
 import Nav from "./components/Nav";
 // import Newsletter from './components/Newsletter';
 import Homepage from "./pages/homepage/Index";
@@ -14,13 +14,15 @@ import MarketPlace from "./pages/marketplace/MarketPlace";
 import PaymentCheckout from "./pages/checkout/PaymentCheckout";
 import ErrorPage from "./pages/ErrorPage";
 import Auction from "./pages/auction/Auction";
+import Drops from "./pages/drops/Drops";
+import Zi from "./components/Zi";
 
 
 
 const Layout = () => {
   return (
     <div className="app">
-      <Nav/>
+      <Header/>
       <Outlet/>
       <Footer />
     </div>
@@ -30,7 +32,7 @@ const Layout = () => {
 const CustomLayout = () => {
   return (
     <div className="app">
-      <Nav/>
+      <Header/>
       <Outlet/>
     </div>
   )
@@ -45,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Homepage/>,
+      },
+      {
+        path: "/drop",
+        element: <Drops/>,
       },
     
       {
@@ -70,6 +76,10 @@ const router = createBrowserRouter([
       {
         path: "/checkout",
         element: <PaymentCheckout/>,
+      },
+      {
+        path: "/zik",
+        element: <Zi/>,
       },
     ]
   },
