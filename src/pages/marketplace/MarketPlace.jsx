@@ -1,17 +1,21 @@
 import React from "react";
-import {category, price, products} from "../../data/data"
+import { category, price, products } from "../../data/data";
 import { ImEqualizer } from "react-icons/im";
 import { RxCaretUp, RxCaretDown } from "react-icons/rx";
-import {FaArrowRight} from "react-icons/fa"
+import { FaArrowRight } from "react-icons/fa";
 import MarketItem from "../../components/MarketItem";
 
 const MarketPlace = () => {
   return (
     <section className="container mx-auto flex flex-col gap-10  lg:py-20 mb-20 mt-[100px]">
-      <h4 className="">See 1-6 of 15 results</h4>
+      <h4 className="lg:hidden">See 1-6 of 15 results</h4>
       <div className="flex gap-14 items-center">
         <div className="lg:w-1/5 py-4 hidden lg:block">
-          <input type="text" placeholder="Search" className="border p-2 bg-gray-100 rounded-lg"/>
+          <input
+            type="text"
+            placeholder="Search"
+            className="border p-2 bg-gray-100 rounded-lg"
+          />
         </div>
         <div className="lg:w-4/5 lg:px-4 w-full">
           <div className="shadow-lg py-4 px-4 flex justify-between lg:rounded-none rounded-2xl">
@@ -21,20 +25,26 @@ const MarketPlace = () => {
             </div>
             {/* mobile view for filter */}
             <span className="block md:hidden">
-            <select className=" py-2 px-2  ">buy
-              <option value="Orange" className="py-4">Filter by</option>
-              <option value="Radish">Radish</option>
-              <option value="Cherry">Cherry</option>
-            </select>
+              <select className=" py-2 px-2  ">
+                buy
+                <option value="Orange" className="py-4">
+                  Filter by
+                </option>
+                <option value="Radish">Radish</option>
+                <option value="Cherry">Cherry</option>
+              </select>
             </span>
 
             <div className="">
-            <select className="lg:border  lg:rounded-md py-2 px-4  ">buy
-              <option value="Orange" className="py-4">Sort by</option>
-              <option value="Radish">Radish</option>
-              <option value="Cherry">Cherry</option>
-            </select>
-          </div>
+              <select className="lg:border  lg:rounded-md py-2 px-4  ">
+                buy
+                <option value="Orange" className="py-4">
+                  Sort by
+                </option>
+                <option value="Radish">Radish</option>
+                <option value="Cherry">Cherry</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
@@ -52,11 +62,11 @@ const MarketPlace = () => {
           </div>
           <div>
             {category.map((item, index) => (
-                 <span className="flex gap-4 pb-4">
-                 <input type="checkbox" />
-                 <label class="">{item}</label>
-               </span>
-            ))}            
+              <span className="flex gap-4 pb-4">
+                <input type="checkbox" />
+                <label class="">{item}</label>
+              </span>
+            ))}
           </div>
 
           <div className="py-6 flex justify-between items-center">
@@ -72,7 +82,7 @@ const MarketPlace = () => {
             {/* <RxCaretDown/> */}
           </div>
           {price.map((item, index) => (
-              <span className="flex gap-4 pb-4">
+            <span className="flex gap-4 pb-4">
               <input type="radio" />
               <label class="">{item}</label>
             </span>
@@ -88,31 +98,28 @@ const MarketPlace = () => {
             {products.map((item) => (
               <div className="lg:w-1/3 lg:p-4 w-full">
                 <MarketItem
-                key={item.id}
-                image={item.image}
-                name={item.name}
-                price={item.price}
+                  key={item.id}
+                  image={item.image}
+                  name={item.name}
+                  price={item.price}
+                  id={item.id}
                 />
-                </div>
+              </div>
             ))}
-              
           </div>
-         
         </div>
-
-       
       </div>
-      <div className="hidden lg:block flex flex-col gap-2 py-6  items-center ">
-            <button className="py-4 px-20  border rounded-lg border-gray-700">
-              See more
-            </button>
-          </div>
-          <div className="float-right lg:hidden">
-            Load more
-            <span>
-            <FaArrowRight size={32} />
-            </span>
-          </div>
+      <div className="hidden lg:flex flex-col gap-2 py-6  items-center ">
+        <button className="py-4 px-20  border rounded-lg border-gray-700">
+          See more
+        </button>
+      </div>
+      <div className="hidden gap-4 md:flex items-center justify-contents-end">
+        <span>Load more</span>
+        <span className="border p-4 rounded-full">
+          <FaArrowRight size={24} />
+        </span>
+      </div>
     </section>
   );
 };

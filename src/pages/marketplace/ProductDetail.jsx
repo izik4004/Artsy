@@ -13,9 +13,9 @@ export const ProductDetail = () => {
   return (
     <section className="container mx-auto mb-20">
       <div className="my-14">hi</div>
-      <div className="flex border">
+      <div className="flex border h-1/2">
         <div className="border-r w-1/2 ;">
-          <img src={image} alt="" className="p-4 block" />
+          <img src={image} alt="" className="p-4 " />
         </div>
         <div className="flex flex-col w-1/2">
           <div className="border-b py-10 px-6 flex justify-between items-center">

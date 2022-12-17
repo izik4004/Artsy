@@ -8,9 +8,9 @@ import ShoppingCart from "./ShoppingCart";
 const PaymentCheckout = () => {
   const [openTab, setOpenTab] = useState(1);
   return (
-    <section className="container mx-auto">
-      <div className="px-5 py-14 mx-auto flex flex-wrap flex-col">
-        <div className="flex mx-auto flex-wrap">
+    <section className="container mx-auto mt-[100px]">
+      <div className="px-5 lg:py-14 py-6 mx-auto flex flex-wrap flex-col">
+        <div className="hidden lg:flex mx-auto flex-wrap">
           <a
             href="#/"
             onClick={() => setOpenTab(1)}
