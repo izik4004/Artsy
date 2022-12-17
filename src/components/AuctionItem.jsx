@@ -3,7 +3,7 @@ import {BsSuitHeart} from "react-icons/bs"
 
 const AuctionItem = (props) => {
   return (
-    <div className=' w-1/3'>
+    <div className=' lg:w-1/3'>
        <div className="border rounded-lg flex flex-col py-4">
       <div className="flex justify-end px-4 ">
         <BsSuitHeart />

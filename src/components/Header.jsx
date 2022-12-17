@@ -19,10 +19,10 @@ const Header = () => {
 
   return (
     <header
-      className={`${
-        isActive ? "lg:top-0 bg-white shadow-2xl" : "lg;top-[60px]"
-      } py-6 lg:py-4 fixed w-full
-  transition-all z-10`}
+  //     className={`${
+  //       isActive ? "lg:top-0 bg-white shadow-2xl" : "lg;top-[60px]"
+  //     } py-6 lg:py-4 fixed w-full
+  // transition-all z-10`}
     >
       <div className="container mx-auto flex justify-between items-center">
         <a href="#/" data-aos="fade-down" data-aos-delay="1200">
@@ -54,7 +54,7 @@ const Header = () => {
         <div
           className={`${
             mobileNav ? "left-0" : "-left-full"
-          } fixed top-0 w-[60vw] lg:hidden transition-all bottom-0 bg-pink-400`}
+          } fixed top-0 w-[80vw] lg:hidden transition-all bottom-0 bg-white `}
         >
           <MobileNav />
         </div>
