@@ -5,7 +5,7 @@ import Newsletter from "../../components/Newsletter";
 
 const Drops = () => {
   return (
-    <div className="container mx-auto ">
+    <div className="container mx-auto mt-[100px]">
       <span className="flex items-center flex-col">
         <h2 className="py-6 text-2xl font-semibold">Upcoming Drops</h2>
         <p className="py-6 text-xl">

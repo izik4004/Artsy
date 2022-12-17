@@ -3,14 +3,14 @@ import Sum from "../../components/Sum";
 
 const PaymentDetails = () => {
   return (
-    <div className="flex flex-col mb-20">
-      <div className="flex justify-between mb-8">
-        <span className="font-semibold">Payment Method</span>
+    <div className=" flex flex-col mb-20">
+      <div className="flex justify-between lg:mb-8">
+        <span className="font-semibold hidden lg:block">Payment Method</span>
         <span>Secure server</span>
       </div>
       <div className="flex gap-6 ">
-        <div className="w-1/2 ">
-          <div className="border p-6">
+        <div className="lg:w-1/2 w-full">
+          <div className="lg:border py-6 lg:px-4">
             <div className="py-4 flex gap-4 items-center">
               <input type="checkbox" checked="checked" name="Select your wallet" id="" />
               <span className="font-semibold">Select your wallet</span>
@@ -36,24 +36,24 @@ const PaymentDetails = () => {
               <input
                 type="email"
                 name=""
-                className="border bg-grey rounded-md py-2 px-10 "
+                className="border bg-grey rounded-md py-2 px-4 "
                 placeholder="Please enter your key"
               />
             </span>
 
-            <div className="flex  gap-4 py-4">
-              <span className="flex flex-col gap-2 w-1/2">
+            <div className="flex  gap-4 py-4 flex-col lg:flex-row">
+              <span className="py-2 flex flex-col gap-2 lg:w-1/2">
                 {" "}
                 <label>Expiry date</label>
                 <input
                   type="email"
                   name=""
-                  className="border bg-grey rounded-md py-2 px-10 "
+                  className="border bg-grey rounded-md py-2 px-4"
                   placeholder="MM/YY"
                 />
               </span>
 
-              <span className="flex flex-col gap-2 w-1/2">
+              <span className="flex py-2 flex-col gap-2 lg:w-1/2">
                 {" "}
                 <label>CVV</label>
                 <input
@@ -71,13 +71,16 @@ const PaymentDetails = () => {
               </span>
             </div>
           </div>
-          <span className="flex flex-col gap-2 py-6">
-            <button className="py-4 px-20 text-white bg-[#3341C1]">
+          <span className="flex flex-col gap-2 py-6 ">
+            <button className="py-6 px-20 text-white bg-[#3341C1]">
               Confirm
             </button>
+            <h5 className="text-blue text-center px-20 py-6 underline">Continue shopping</h5>
           </span>
         </div>
-        <div className="w-1/2">
+
+        
+        <div className="lg:w-1/2 hidden lg:block">
           <h3 className="py-4 font-semibold">Payment Summary</h3>
           <div className=" py-8 border-t border-b">
             <div className="flex justify-between">

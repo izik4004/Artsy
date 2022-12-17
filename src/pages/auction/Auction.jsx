@@ -5,7 +5,7 @@ import AuctionImageCard from "../../components/AuctionImageCard";
 
 const Auction = () => {
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto mt-[100px]">
       <div className="py-10">
         <h4 className="text-xl">Here’s an overview of products actively on auction, explore!</h4>
       </div>
