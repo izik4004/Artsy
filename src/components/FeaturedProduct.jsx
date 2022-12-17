@@ -6,8 +6,8 @@ import { features } from "../data/data";
 const FeaturedProduct = () => {
   const { feature1, feature2, feature3 } = features;
   return (
-    <section className="flex container mx-auto flex-col gap-10 my-28">
-      <h2 className="text-3xl">Featured Products</h2>
+    <section className="flex container mx-auto flex-col gap-10 my-16">
+      <h2 className="text-3xl font-semibold">Featured Products</h2>
      
      <Featured
      title={feature1.title}

@@ -4,16 +4,20 @@ import { topCreators } from "../data/data";
 const TopCreators = () => {
   const { title, subtitle, specialty, image } = topCreators;
   return (
-    <section className="bg-[#E2E2E2] py-20 relative">
-      <div className="container mx-auto flex justify-between">
-        <h2 className="w-1/3 text-4xl font-semibold tracking-wider">{title}</h2>
-        <div className="">
+    <section className="bg-[#E2E2E2] lg:py-20 py-4  relative">
+      <div className="container mx-auto flex justify-between ">
+        <h2 className="lg:w-1/3 w-1/2 lg:text-4xl font-semibold tracking-wider">
+          {title}
+        </h2>
+        <ul className="flex md:text-xs lg:block">
           {specialty.map((item, index) => (
-            <div className="flex flex-col py-2 text-2xl">{item.name}</div>
+            <li className="flex flex-col py-2 lg:text-2xl md:text-sm">
+              {item.name}
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
-      <p className="container mb-6 pr-20 mx-auto py-14 text-xl tracking-wider leading-9">
+      <p className="container mb-6 lg:pr-20 mx-auto lg:py-14 text-sm lg:text-xl tracking-wider lg:leading-9">
         {subtitle}
       </p>
       <img

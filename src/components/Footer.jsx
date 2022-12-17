@@ -5,7 +5,7 @@ const Footer = () => {
   const { title, email, footerLink3, footerText, footerLink1, footerLink2 } =
     footer;
   return (
-    <section className="flex flex-col container mx-auto">
+    <section className="flex-col container mx-auto hidden lg:block">
       <div className="flex justify-between">
         <div className="flex items-center">
           <h1 className="text-4xl font-bold">{title}</h1>
