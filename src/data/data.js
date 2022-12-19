@@ -115,49 +115,57 @@ export const topCreators = {
         id:1,
         name: "PHILOMENA '22",
         price: "$3.90",
-        image: Product1
+        image: Product1,
+        category:"fashion"
     },
     {
         id:2,
         name: "BOOLEAN EGYPTIAN",
         price: "$3.90",
-        image: Product2
+        image: Product2,
+        category:"arts"
     },
     {
         id:3,
         name: "BLANC",
         price: "$3.90",
-        image: Product3
+        image: Product3,
+        category:"nature"
     },
     {
         id:4,
         name: "ELLIPSIA",
         price: "$3.90",
-        image: Product4
+        image: Product4,
+        category:"editorial"
     },
     {
         id:5,
         name: "THE LAWMAKERS",
         price: "$3.90",
-        image: Product5
+        image: Product5,
+        category:"fashion"
     },
     {
         id:6,
         name: "VEIL",
         price: "$3.90",
-        image: Product6
+        image: Product6,
+        category:"nature"
     },
     {
         id:7,
         name: "ALTERNATING",
         price: "$3.90",
-        image: Product7
+        image: Product7,
+        category:"editorial"
     },
     {
         id:8,
         name: "ROSEMARY '22",
         price: "$3.90",
-        image: Product8
+        image: Product8,
+        category:"art"
     },
     {
         id:9,

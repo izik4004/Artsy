@@ -3,7 +3,7 @@ import { BsSuitHeart } from "react-icons/bs";
 import image1 from "../assets/Collection1.png";
 const CollectionCard = () => {
   return (
-    <div className="border flex flex-col p-4 w-1/3">
+    <div className="border flex flex-col p-4 lg:w-1/3">
       <div className="flex justify-end">
         <BsSuitHeart />
       </div>

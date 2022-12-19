@@ -7,11 +7,17 @@ const Me = () => {
   return (
     <section className="text-gray-600 body-font overflow-hidden">
   <div className="container px-5  mx-auto">
-    <div className="flex ">
+    <div className="flex flex-col lg:flex-row">
       <>
       <img alt="ecommerce" className="  rounded-lg" src={feature1.image}/>
-      <span className='absolute  text-white text-xl'>rekjjkkljfkljdfghhhhhhhhhhhhhhhhhhhh5555555555555555555555555555555
-      jkdjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkhjjjjjjjjjjjjjjjjjjjjelkjelr</span>
+      <div className='absolute border px-6 py-2 bg-opacity-40 rounded-xl bg-white  text-white text-xl mx-10'>
+        <p className='text-sm'>Time Remaining</p>
+        <span>
+            <p className='text-base'>06 hrs:45 min:22s</p>
+            <button>join</button>
+        </span>
+       
+      </div>
       </>
       <div className="lg:w-2/5 w-full lg:pl-10 mt-6 lg:mt-0">
         <button className='py-2 px-10 text-md bg-blue text-white rounded-lg hidden lg:block'>UPCOMING</button>
