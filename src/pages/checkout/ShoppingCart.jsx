@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Sum from "../../components/Sum";
 import CheckoutItem from "./CheckoutItem";
 
@@ -11,7 +12,7 @@ const ShoppingCart = ({CartItem}) => {
           <button className="py-6 px-20 text-white bg-[#3341C1] lg:mt-0 mt-6">
             Proceed to checkout
           </button>
-          <h5 className="text-blue px-20 py-6 underline">Continue shopping</h5>
+          <Link to="/marketplace" className="text-blue px-20 py-6 underline">Continue shopping</Link>
         </div>
         <div className="lg:w-1/2 lg:order-2 order-1">
           <Sum />

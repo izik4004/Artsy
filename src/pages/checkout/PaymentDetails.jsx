@@ -1,5 +1,6 @@
 import React from "react";
 import Sum from "../../components/Sum";
+import { Link } from "react-router-dom";
 
 const PaymentDetails = () => {
   return (
@@ -75,7 +76,7 @@ const PaymentDetails = () => {
             <button className="py-6 px-20 text-white bg-[#3341C1]">
               Confirm
             </button>
-            <h5 className="text-blue text-center px-20 py-6 underline">Continue shopping</h5>
+            <Link to="/marketplace" className="text-blue text-center px-20 py-6 underline">Continue shopping</Link>
           </span>
         </div>
 
