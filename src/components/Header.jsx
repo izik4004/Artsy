@@ -8,9 +8,13 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { FiMessageSquare } from "react-icons/fi";
 import { nav } from "../data/data";
+import { useNavigate } from "react-router-dom";
 
-const Header = () => {
+
+const Header = ({CartItem}) => {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  // console.log(cartItems.length)
   return (
     <header className="">
       <div className="z-10 bg-white shadow-md w-full fixed top-0 left-0">
@@ -53,9 +57,15 @@ const Header = () => {
             </ul>
           </div>
           <div className="flex justify-between lg:gap-6 gap-4 align-middle cursor-pointer">
-            <BiSearch size={18} />
-            <HiOutlineShoppingCart size={18} />
-            <IoMdNotificationsOutline size={18} className="hidden lg:block" />
+            <BiSearch size={26} />
+            <div>
+              <HiOutlineShoppingCart
+                size={26}
+                onClick={() => navigate(`/checkout/`)}
+              />
+              <p className="absolute p-1 mx-4 shadow-xl text-white  text-xs bottom-10 bg-red-500  rounded-full">{CartItem.length}</p>
+            </div>
+            <IoMdNotificationsOutline size={26} className="hidden lg:block" />
           </div>
         </div>
       </div>

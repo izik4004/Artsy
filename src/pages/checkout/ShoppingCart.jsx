@@ -2,10 +2,10 @@ import React from "react";
 import Sum from "../../components/Sum";
 import CheckoutItem from "./CheckoutItem";
 
-const ShoppingCart = () => {
+const ShoppingCart = ({CartItem}) => {
   return (
     <div>
-      <CheckoutItem />
+      <CheckoutItem CartItem={CartItem}/>
       <div className="flex py-10 flex-col lg:flex-row">
         <div className="lg:w-1/2 order-2 lg:order-1 flex flex-col items-center lg:items-start">
           <button className="py-6 px-20 text-white bg-[#3341C1] lg:mt-0 mt-6">

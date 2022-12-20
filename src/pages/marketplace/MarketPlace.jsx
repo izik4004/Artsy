@@ -68,14 +68,14 @@ const MarketPlace = () => {
             : <RxCaretDown size={24} onClick={() => setOpenDropDown(true)} className="cursor-pointer"/> }
           </div>
           {openDropDown === true ?
-          <div>
+          <>
             {category.map((item, index) => (
               <span className="flex gap-4 pb-4" key={index}>
                 <input type="checkbox" />
                 <label>{item}</label>
               </span>
             ))}
-          </div>
+          </>
         :<></>}
           <div className="py-6 flex justify-between items-center">
             <span className="font-semibold">By price</span>
@@ -92,7 +92,7 @@ const MarketPlace = () => {
           {price.map((item, index) => (
             <span className="flex gap-4 pb-4" key={index}>
               <input type="radio" />
-              <label class="">{item}</label>
+              <label>{item}</label>
             </span>
           ))}
           <div className="py-6 flex justify-between items-center">
@@ -107,9 +107,8 @@ const MarketPlace = () => {
                return search.toLowerCase() === '' ? item : item.name
                .toLowerCase().includes(search)
             }).map((item) => (
-              <div className="lg:w-1/3 lg:p-4 w-full">
+              <div className="lg:w-1/3 lg:p-4 w-full" key={item.id}>
                 <MarketItem
-                  key={item.id}
                   image={item.image}
                   name={item.name}
                   price={item.price}

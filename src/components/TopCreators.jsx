@@ -11,7 +11,7 @@ const TopCreators = () => {
         </h2>
         <ul className="flex md:text-xs lg:block">
           {specialty.map((item, index) => (
-            <li className="flex flex-col py-2 lg:text-2xl md:text-sm">
+            <li className="flex flex-col py-2 lg:text-2xl md:text-sm" key={index}>
               {item.name}
             </li>
           ))}

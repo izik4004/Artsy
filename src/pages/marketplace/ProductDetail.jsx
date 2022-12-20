@@ -10,26 +10,26 @@ import image from "../../assets/productDetail.png";
 import CollectionCard from "../../components/CollectionCard";
 import { useParams } from "react-router-dom";
 import { products } from "../../data/data";
+// import { ShopContext } from "../../context/ShopContext";
+// import { useContext } from "react";
 
-
-export const ProductDetail = () => {
+export const ProductDetail = ({addToCart, products, CartItem}) => {
+  console.log(CartItem.length)
   const { id } = useParams();
-  const singleProduct = products.find(
-    (product) => product.id === parseInt(id)
-  );
-
+  const singleProduct = products.find((product) => product.id === parseInt(id));
+  // const { addToCart, updateCartItemCount, removeFromC } = useContext(ShopContext);
   return (
     <section className="container mx-auto mb-20 mt-[180px]">
       {/* <div className="my-14">hi</div> */}
       <div className="flex border h-1/2 flex-col lg:flex-row">
         <div className="border-r lg:w-1/2 ;">
-          <img src={singleProduct.image} alt="" className="p-4 w-full" />
+          <img src={singleProduct.image} alt={singleProduct.name} className="p-4 w-full" />
         </div>
         <div className="flex flex-col lg:w-1/2">
           <div className="border-b py-4 px-6 flex justify-between items-center">
             <h3 className="text-3xl font-semibold">{singleProduct.name}</h3>
             {/* <div> */}
-              <h5 className="text-lg">{singleProduct.price}</h5>
+            <h5 className="text-lg">{singleProduct.price}</h5>
             {/* </div> */}
           </div>
           <div className="border-b px-6 py-4">
@@ -45,7 +45,7 @@ export const ProductDetail = () => {
               <AiOutlinePlus className="text-xl cursor-pointer" />
             </p>
             <div className="flex items-center gap-4 py-4">
-              <button className="px-14 py-4 bg-[#3341C1] text-white tracking-wider">
+              <button className="px-14 py-4 bg-[#3341C1] text-white tracking-wider" onClick={() => addToCart(singleProduct)}>
                 Add to cart
               </button>
               <div className="border px-6 py-4">
@@ -82,8 +82,7 @@ export const ProductDetail = () => {
       </section>
 
       <section className="my-10">
-        <CollectionCard 
-        />
+        <CollectionCard />
       </section>
       <div className="flex justify-center">
         <button className="border text-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-2 px-8 rounded-lg">

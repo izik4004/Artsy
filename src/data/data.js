@@ -34,6 +34,7 @@ export const hero = {
 
 export const features = {
   feature1: {
+    id:"1",
     title: "The Boolean Egyptian",
     subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
@@ -116,21 +117,30 @@ export const topCreators = {
         name: "PHILOMENA '22",
         price: "$3.90",
         image: Product1,
-        category:"fashion"
+        category:"fashion",
+        subtitle:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
+       FeaturedImage1: FeaturedImage1,
     },
     {
         id:2,
         name: "BOOLEAN EGYPTIAN",
         price: "$3.90",
         image: Product2,
-        category:"arts"
+        category:"arts",
+        subtitle:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
+    image: FeaturedImage1,
     },
     {
         id:3,
         name: "BLANC",
         price: "$3.90",
         image: Product3,
-        category:"nature"
+        category:"nature",
+        subtitle:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
+    image: FeaturedImage1,
     },
     {
         id:4,

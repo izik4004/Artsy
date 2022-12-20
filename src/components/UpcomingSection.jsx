@@ -15,7 +15,7 @@ const UpcomingSection = () => {
           {/* <hr className="mt-4"/> */}
         </div>
         <div className="lg:py-6 relative">
-          <img src={image} alt="" srcset="" />
+          <img src={image} alt="" />
           <div className="hidden lg:flex gap-4 lg:px-8 auction absolute text-white lg:bottom-28  justify-between">
             <div className="flex items-center">
               <h3 className="text-4xl">01</h3>

@@ -5,8 +5,9 @@ import PaymentDetails from "./PaymentDetails";
 import ShippingDetails from "./ShippingDetails";
 import ShoppingCart from "./ShoppingCart";
 
-const PaymentCheckout = () => {
+const PaymentCheckout = ({ CartItem }) => {
   const [openTab, setOpenTab] = useState(1);
+ 
   return (
     <section className="container mx-auto mt-[100px]">
       <div className="px-5 lg:py-14 py-6 mx-auto flex flex-wrap flex-col">
@@ -51,17 +52,13 @@ const PaymentCheckout = () => {
           </a>
         </div>
       </div>
-
-      {openTab === 1 && (
-        <ShoppingCart/>
+      {CartItem.length === 0 ? (
+        <h1 className="no-items product">No Items are add in Cart</h1>
+      ) : (
+        <>{openTab === 1 && <ShoppingCart CartItem={CartItem} />}</>
       )}
-
-      {openTab === 2 && 
-        <ShippingDetails/>
-      }
-       {openTab === 3 && 
-        <PaymentDetails/>
-      }
+      {openTab === 2 && <ShippingDetails />}
+      {openTab === 3 && <PaymentDetails />}
     </section>
   );
 };
