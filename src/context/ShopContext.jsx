@@ -1,34 +1,57 @@
 import React, { createContext, useState } from 'react'
 import { products } from '../data/data';
 
-export const ShopContext = createContext();
+export const CartContext = createContext();
 
-const getDefaultCart = () => {
-    let cart = {}
-    for (let i = 1; i < products.length + 1; i++) {
-        cart[i] = 0
-    }
-    return cart;
+export function useShoppingCart(){
+
 }
-export const ShopContextProvider = (props) => {
-    const [cartItems, setCartItems] = useState(getDefaultCart())
+
+export const ShopContext = (props) => {
+  const [cartItems, setCartItems] = useState([])
   
-  const addToCart = (itemId) => {
-    setCartItems((prev) => ({...prev, [itemId]: prev[itemId] + 1}));
+  function getItemQuantity(id) {
+    return cartItems.find(item => item.id === id)?.quantity || 0
   }
 
-  const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({...prev, [itemId]: prev[itemId] - 1}));
+  function increaseCartQuantity(id) {
+   setCartItems(currItems => {
+    if (currItems.find(item => item.id === id) == null) {
+      return [...currItems, {id, quantity:1}]
+    } else {
+      return currItems.map(item => {
+        if(item.id === id) {
+          return {...item, quantity:item.quantity + 1}
+        } else {
+          return item
+        }
+      })
+    }
+   })
   }
 
-  const updateCartItemCount = (newAmount, itemId) => {
-    setCartItems((prev) => ({...prev, [itemId]: newAmount}));
-  }
-
-  const contextValue = {cartItems, products, addToCart, removeFromCart, updateCartItemCount}
+  function decreaseCartQuantity(id) {
+    setCartItems(currItems => {
+     if (currItems.find(item => item.id === id)?.quantity === 1) {
+       return currItems.filter(item => item.id !== id)
+     } else {
+       return currItems.map(item => {
+         if(item.id === id) {
+           return {...item, quantity:item.quantity - 1}
+         } else {
+           return item
+         }
+       })
+     }
+    })
+   }
   
-    return (
-    <ShopContext.Provider value={contextValue}>{props.children}</ShopContext.Provider>
+
+   function removeFromCart(id){
+    setCartItems()
+   }
+  return (
+    <ShopContext.Provider value={{getItemQuantity, decreaseCartQuantity, increaseCartQuantity}}>{props.children}</ShopContext.Provider>
   )
 }
 

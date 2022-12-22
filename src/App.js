@@ -13,7 +13,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Auction from "./pages/auction/Auction";
 import Drops from "./pages/drops/Drops";
 import Zi from "./components/Zi";
-// import { ShopContextProvider } from "./context/ShopContext";
+import { ShopContextProvider } from "./context/ShopContext";
 import { products } from "./data/data";
 
 
@@ -66,21 +66,19 @@ const decreaseQty = (product) => {
 
   return (
     <div className="app">
-      {/* <ShopContextProvider> */}
       <Router>
-        <Header CartItem={CartItem}/>
+        <Header/>
         <Routes>
           <Route path="/" element={<Homepage/>} />
           <Route path="/marketplace" element={<MarketPlace />} />
           <Route path="/drop" element={<Drops />} />
-          <Route path="/products/:id" element={<ProductDetail CartItem={CartItem} products={products} addToCart={addToCart} decreaseQty={decreaseQty}/>} />
+          <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/auctions" element={<Auction />} />
-          <Route path="/checkout" element={<PaymentCheckout  CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty}/>} />
+          <Route path="/checkout" element={<PaymentCheckout/>} />
           <Route path="/zik" element={<Zi />} />
         </Routes>
         <Footer />
       </Router>
-      {/* </ShopContextProvider> */}
     </div>
   );
 }

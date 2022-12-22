@@ -10,14 +10,17 @@ import image from "../../assets/productDetail.png";
 import CollectionCard from "../../components/CollectionCard";
 import { useParams } from "react-router-dom";
 import { products } from "../../data/data";
-// import { ShopContext } from "../../context/ShopContext";
-// import { useContext } from "react";
+import { ShopContext } from "../../context/ShopContext";
+import { useContext } from "react";
 
-export const ProductDetail = ({addToCart, products, CartItem}) => {
-  console.log(CartItem.length)
+export const ProductDetail = () => {
+   const { addToCart, cartItems, products, updateCartItemCount, removeFromC } = useContext(ShopContext);
+  // console.log(cartItems.length)
   const { id } = useParams();
   const singleProduct = products.find((product) => product.id === parseInt(id));
-  // const { addToCart, updateCartItemCount, removeFromC } = useContext(ShopContext);
+ console.log(singleProduct)
+
+ 
   return (
     <section className="container mx-auto mb-20 mt-[180px]">
       {/* <div className="my-14">hi</div> */}
@@ -45,7 +48,7 @@ export const ProductDetail = ({addToCart, products, CartItem}) => {
               <AiOutlinePlus className="text-xl cursor-pointer" />
             </p>
             <div className="flex items-center gap-4 py-4">
-              <button className="px-14 py-4 bg-[#3341C1] text-white tracking-wider" onClick={() => addToCart(singleProduct)}>
+              <button className="px-14 py-4 bg-[#3341C1] text-white tracking-wider" onClick={() => addToCart(singleProduct.id)}>
                 Add to cart
               </button>
               <div className="border px-6 py-4">

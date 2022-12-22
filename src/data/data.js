@@ -14,7 +14,11 @@ import Product8 from "../assets/item8.png"
 import Product9 from "../assets/item9.png"
 import Auction1 from "../assets/aution1.png"
 import Auction2 from "../assets/auction2.png"
-
+import Slider1 from "../assets/slider1.png"
+import Slider2 from "../assets/slider2.png"
+import Slider3 from "../assets/slider3.png"
+import Slider4 from "../assets/slider4.png"
+import Slider5 from "../assets/slider5.png"
 
 
 
@@ -32,6 +36,7 @@ export const hero = {
     "Flip through more than 10,000 vintage shots, old photograghs, historic images and captures seamlessly in one place. Register to get top access.",
 };
 
+export const carousel = [Slider1, Slider2, Slider3, Slider4, Slider5]
 export const features = {
   feature1: {
     id:"1",
