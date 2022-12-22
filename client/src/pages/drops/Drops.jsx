@@ -1,6 +1,5 @@
 import React from "react";
-// import DropItem from "../../components/DropItem";
-import Me from "../../components/Me";
+import DropItem from "../../components/DropItem";
 import Newsletter from "../../components/Newsletter";
 
 const Drops = () => {
@@ -14,8 +13,7 @@ const Drops = () => {
         <button className="border px-10 rounded-md py-2">Notify me</button>
       </span>
       <div className="py-10 mt-10">
-        <Me/>
-      {/* <DropItem /> */}
+      <DropItem />
       </div>
       <Newsletter />
     </section>

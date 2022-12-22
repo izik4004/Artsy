@@ -12,7 +12,6 @@ import PaymentCheckout from "./pages/checkout/PaymentCheckout";
 import ErrorPage from "./pages/ErrorPage";
 import Auction from "./pages/auction/Auction";
 import Drops from "./pages/drops/Drops";
-import Zi from "./components/Zi";
 import { ShopProvider } from "./context/ShopContext";
 import { products } from "./data/data";
 import LiveAuction from "./pages/auction/LiveAuction";
