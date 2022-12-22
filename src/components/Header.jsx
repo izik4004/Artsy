@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 // import { header } from "../data";
 import { NavLink } from "react-router-dom";
 import { FcMenu } from "react-icons/fc";
@@ -9,12 +9,15 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { FiMessageSquare } from "react-icons/fi";
 import { nav } from "../data/data";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../context/ShopContext";
 
 
-const Header = ({CartItem}) => {
+const Header = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
-  // console.log(cartItems.length)
+  const cart = useContext(CartContext);
+
+  const productCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
   return (
     <header className="">
       <div className="z-10 bg-white shadow-md w-full fixed top-0 left-0">
@@ -63,7 +66,7 @@ const Header = ({CartItem}) => {
                 size={26}
                 onClick={() => navigate(`/checkout/`)}
               />
-              <p className="absolute p-1 mx-4 shadow-xl text-white  text-xs bottom-10 bg-red-500  rounded-full">{CartItem.length}</p>
+              <p className="absolute py-0.5 px-1.5 mx-4 shadow-xl text-white  text-xs bottom-10 bg-red-500  rounded-full">{productCount}</p>
             </div>
             <IoMdNotificationsOutline size={26} className="hidden lg:block" />
           </div>

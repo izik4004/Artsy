@@ -13,8 +13,9 @@ import ErrorPage from "./pages/ErrorPage";
 import Auction from "./pages/auction/Auction";
 import Drops from "./pages/drops/Drops";
 import Zi from "./components/Zi";
-import { ShopContextProvider } from "./context/ShopContext";
+import { ShopProvider } from "./context/ShopContext";
 import { products } from "./data/data";
+import LiveAuction from "./pages/auction/LiveAuction";
 
 
 function App() {
@@ -66,6 +67,7 @@ const decreaseQty = (product) => {
 
   return (
     <div className="app">
+      <ShopProvider>
       <Router>
         <Header/>
         <Routes>
@@ -75,10 +77,11 @@ const decreaseQty = (product) => {
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/auctions" element={<Auction />} />
           <Route path="/checkout" element={<PaymentCheckout/>} />
-          <Route path="/zik" element={<Zi />} />
+          <Route path="/livebid" element={<LiveAuction/>} />
         </Routes>
         <Footer />
       </Router>
+      </ShopProvider>
     </div>
   );
 }

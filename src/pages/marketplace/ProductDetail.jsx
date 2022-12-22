@@ -10,23 +10,27 @@ import image from "../../assets/productDetail.png";
 import CollectionCard from "../../components/CollectionCard";
 import { useParams } from "react-router-dom";
 import { products } from "../../data/data";
-import { ShopContext } from "../../context/ShopContext";
+import { CartContext } from "../../context/ShopContext";
 import { useContext } from "react";
 
 export const ProductDetail = () => {
-   const { addToCart, cartItems, products, updateCartItemCount, removeFromC } = useContext(ShopContext);
-  // console.log(cartItems.length)
   const { id } = useParams();
-  const singleProduct = products.find((product) => product.id === parseInt(id));
- console.log(singleProduct)
-
+  const cart = useContext(CartContext);
  
+  const singleProduct = products.find((product) => product.id === parseInt(id));
+
+  const productQty = cart.getItemQuantity(singleProduct.id);
+
   return (
     <section className="container mx-auto mb-20 mt-[180px]">
       {/* <div className="my-14">hi</div> */}
       <div className="flex border h-1/2 flex-col lg:flex-row">
         <div className="border-r lg:w-1/2 ;">
-          <img src={singleProduct.image} alt={singleProduct.name} className="p-4 w-full" />
+          <img
+            src={singleProduct.image}
+            alt={singleProduct.name}
+            className="p-4 w-full"
+          />
         </div>
         <div className="flex flex-col lg:w-1/2">
           <div className="border-b py-4 px-6 flex justify-between items-center">
@@ -43,12 +47,21 @@ export const ProductDetail = () => {
               Total views:<span className="px-2">1.7k views</span>
             </p>
             <p className="flex gap-4 py-4 items-center">
-              <RiSubtractFill className="text-2xl cursor-pointer" />
-              <span className="text-xl">1</span>
-              <AiOutlinePlus className="text-xl cursor-pointer" />
+              <RiSubtractFill
+                className="text-2xl cursor-pointer"
+                onClick={() => cart.decreaseCartQuantity(singleProduct.id)}
+              />
+              <span className="text-xl">{productQty}</span>
+              <AiOutlinePlus
+                className="text-xl cursor-pointer"
+                onClick={() => cart.increaseCartQuantity(singleProduct.id)}
+              />
             </p>
             <div className="flex items-center gap-4 py-4">
-              <button className="px-14 py-4 bg-[#3341C1] text-white tracking-wider" onClick={() => addToCart(singleProduct.id)}>
+              <button
+                className="px-14 py-4 bg-[#3341C1] text-white tracking-wider"
+                onClick={() => cart.increaseCartQuantity(singleProduct.id)}
+              >
                 Add to cart
               </button>
               <div className="border px-6 py-4">

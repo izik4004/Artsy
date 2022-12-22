@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import Sum from "../../components/Sum";
 import CheckoutItem from "./CheckoutItem";
 
-const ShippingDetails = () => {
+const ShippingDetails = ({cart}) => {
   return (
-    <section className="container mx-auto flex leading-none tracking-wider mb-20">
+    <section className="container mx-auto gap-12 flex leading-none tracking-wider mb-20">
       <div className="lg:w-1/2 w-full">
         <form>
           <span className="flex flex-col gap-2 py-4">
@@ -14,7 +14,7 @@ const ShippingDetails = () => {
             <input
               type="email"
               name=""
-              className="border bg-grey rounded-md py-4 px-4 lg:w-3/4 "
+              className="border bg-grey rounded-md py-4 px-4"
               placeholder="email"
             />
           </span>
@@ -24,14 +24,14 @@ const ShippingDetails = () => {
             <input
               type="email"
               name=""
-              className="border bg-grey rounded-md py-4 px-4 lg:w-3/4 "
+              className="border bg-grey rounded-md py-4 px-4"
               placeholder="email"
             />
           </span>
           <span className="flex flex-col gap-2 py-4">
             {" "}
             <label>Choose a wallet</label>
-            <select className="border bg-grey rounded-md py-4 px-4 lg:w-3/4 ">
+            <select className="border bg-grey rounded-md py-4 px-4">
               <option value="Orange" className="py-4"></option>
               <option value="Radish">Radish</option>
               <option value="Cherry">Cherry</option>
@@ -40,14 +40,14 @@ const ShippingDetails = () => {
           <span className="flex flex-col gap-2 py-4">
             {" "}
             <label>City</label>
-            <select className="border bg-grey rounded-md py-4 px-4 lg:w-3/4 ">
+            <select className="border bg-grey rounded-md py-4 px-4">
               <option value="Orange" className="py-4"></option>
               <option value="Radish">Radish</option>
               <option value="Cherry">Cherry</option>
             </select>
           </span>
 
-          <div className="flex lg:w-3/4 flex-col lg:flex-row gap-4">
+          <div className="flex flex-col lg:flex-row gap-4">
             <span className="flex flex-col gap-2 py-4 lg:w-1/2">
               {" "}
               <label>Country</label>
@@ -75,12 +75,12 @@ const ShippingDetails = () => {
             <input
               type="email"
               name=""
-              className="border bg-grey rounded-md py-4 px-4 lg:w-3/4 "
+              className="border bg-grey rounded-md py-4 px-4"
               placeholder="email"
             />
           </span>
 
-          <span className="flex flex-col gap-2 py-4 lg:w-3/4">
+          <span className="flex flex-col gap-2 py-4">
             <button className="py-6 px-20 text-white bg-[#3341C1]">
               Proceed to payment
             </button>
@@ -89,7 +89,14 @@ const ShippingDetails = () => {
         </form>
       </div>
       <div className="lg:w-1/2 hidden lg:block">
-        <CheckoutItem />
+      {cart.items.map((item, index) => (
+          <CheckoutItem 
+          key={index}
+          id={item.id}
+          quantity={item.quantity}
+          />
+      ))}
+      
         <div className="py-10">
           <Sum />
         </div>

@@ -4,10 +4,14 @@ import CheckoutItem from "./CheckoutItem";
 import PaymentDetails from "./PaymentDetails";
 import ShippingDetails from "./ShippingDetails";
 import ShoppingCart from "./ShoppingCart";
+import { CartContext } from "../../context/ShopContext";
+import { useContext } from "react";
 
-const PaymentCheckout = ({ CartItem }) => {
+
+const PaymentCheckout = () => {
   const [openTab, setOpenTab] = useState(1);
- 
+  const cart = useContext(CartContext);
+  console.log("me", cart.items)
   return (
     <section className="container mx-auto mt-[100px]">
       <div className="px-5 lg:py-14 py-6 mx-auto flex flex-wrap flex-col">
@@ -50,14 +54,15 @@ const PaymentCheckout = ({ CartItem }) => {
           >
             Payment details
           </a>
+      
         </div>
       </div>
-      {CartItem.length === 0 ? (
+      {cart.items === 0 ? (
         <h1 className="no-items product">No Items are add in Cart</h1>
       ) : (
-        <>{openTab === 1 && <ShoppingCart CartItem={CartItem} />}</>
+        <>{openTab === 1 && <ShoppingCart cart={cart}/>}</>
       )}
-      {openTab === 2 && <ShippingDetails />}
+      {openTab === 2 && <ShippingDetails cart={cart}/>}
       {openTab === 3 && <PaymentDetails />}
     </section>
   );
