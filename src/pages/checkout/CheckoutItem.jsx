@@ -32,7 +32,7 @@ const CheckoutItem = ({id, quantity}) => {
   </div>
   <div className='flex justify-between flex-col items-center cursor-pointer'>
       <ImCancelCircle size={24} onClick={() => cart.decreaseCartQuantity(productData.id)}/>
-      <h4>$39.50</h4>
+      <h4>${(quantity * productData.price).toFixed(2)}</h4>
   </div>
 </div>
 {/* ))} */}

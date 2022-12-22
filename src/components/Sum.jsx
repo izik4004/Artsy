@@ -1,6 +1,8 @@
-import React from "react";
+import { CartContext } from "../context/ShopContext";
+import { useContext } from "react";
 
 const Sum = () => {
+  const cart = useContext(CartContext);
   return (
     <div className="flex justify-between">
       <div className="flex flex-col gap-8">
@@ -9,9 +11,9 @@ const Sum = () => {
         <span>Total:</span>
       </div>
       <div className="flex flex-col gap-8">
-        <span>6 Items</span>
-        <span>$678</span>
-        <span>$346785</span>
+        <span>{cart.items.length}</span>
+        <span>$0</span>
+        <span>${cart.getTotalCost().toFixed(2)}</span>
       </div>
     </div>
   );

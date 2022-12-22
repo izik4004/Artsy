@@ -1,7 +1,8 @@
 import React from "react";
 import image from "../../assets/auction2.png";
 import { FaArrowRight } from "react-icons/fa";
-import { BsSuitHeart } from "react-icons/bs";
+import { AiFillHeart } from "react-icons/ai";
+import {RiSendPlaneFill} from "react-icons/ri"
 
 const LiveAuction = () => {
   return (
@@ -11,7 +12,7 @@ const LiveAuction = () => {
           <img src={image} alt="" className="h=[700px]" />
         </div>
         <div className="lg:flex-start lg:border-l-2">
-          <div className="px-4">
+          <div className="px-6">
             <div className="flex gap-4 items-center py-2">
               <img
                 className="inline-block h-10 w-10 rounded-full object-cover ring-2 ring-white"
@@ -23,7 +24,7 @@ const LiveAuction = () => {
                 <p className="text-base py-1">$5000</p>
               </div>
             </div>
-            <span className="pt-4">Creator: jkkljlk</span>
+            <span className="pt-4 text-base">Creator: jkkljlk</span>
             <div className="flex gap-6 py-2">
               <div className="flex items-center">
                 <input
@@ -32,10 +33,10 @@ const LiveAuction = () => {
                   className="border rounded-xl py-1 px-4"
                   placeholder="Place a bid..."
                 />
-                <BsSuitHeart size={18} color="red" className="-ml-8" />
+                <RiSendPlaneFill size={18} className="-ml-8 cursor-pointer" />
               </div>
               <div className="flex border rounded-full p-2 justify-items-center">
-                <BsSuitHeart size={18} color="red" />
+                <AiFillHeart size={18} color="red" className="cursor-pointer"/>
               </div>
             </div>
           </div>

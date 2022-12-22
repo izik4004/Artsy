@@ -25,7 +25,7 @@ const ShoppingCart = ({cart}) => {
           <Link to="/marketplace" className="text-blue px-20 py-6 underline">Continue shopping</Link>
         </div>
         <div className="lg:w-1/2 lg:order-2 order-1">
-          <Sum />
+          <Sum cart={cart}/>
         </div>
       </div>
     </div>
