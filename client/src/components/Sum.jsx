@@ -8,12 +8,12 @@ const Sum = () => {
       <div className="flex flex-col gap-8">
         <span>Products in cart:</span>
         <span>Shopping:</span>
-        <span>Total:</span>
+        <span className="font-semibold">Total:</span>
       </div>
       <div className="flex flex-col gap-8">
         <span>{cart.items.length}</span>
         <span>$0</span>
-        <span>${cart.getTotalCost().toFixed(2)}</span>
+        <span className="font-semibold">${cart.getTotalCost().toFixed(2)}</span>
       </div>
     </div>
   );

@@ -190,6 +190,27 @@ export const topCreators = {
     },
   ]
 
+  // export const bid = [
+  //   {
+  //     id:1,
+  //     name: "Out of the box",
+  //     creator: "Dan Murray",
+  //     Highestbid: "0.57ETH",
+  //     currentbid: "0.987 ETH",
+  //     date: "12/08/22",
+  //     image: Auction1
+  //   },
+  //   {
+  //     id:2,
+  //     name: "Out of the box",
+  //     creator: "Jacob Banks",
+  //     Highestbid: "0.34ETH",
+  //     currentbid: "0.99 ETH",
+  //     date: "12/08/22",
+  //     image:Auction2
+  //   }
+  // ]
+
   export const auction = [
     {
       id:1,

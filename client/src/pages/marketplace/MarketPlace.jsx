@@ -4,11 +4,14 @@ import { ImEqualizer } from "react-icons/im";
 import { RxCaretUp, RxCaretDown } from "react-icons/rx";
 import { FaArrowRight } from "react-icons/fa";
 import MarketItem from "../../components/MarketItem";
+// import { product } from "../../data/product";
 
 const MarketPlace = () => {
   const [search, setSearch] = useState("")
   const [openDropDown, setOpenDropDown] = useState(true)
 
+  // const {featured_products, products} = product
+  // console.log("prod", products)
   // const filterByCategory = 
   return (
     <section className="container mx-auto flex flex-col gap-10  lg:py-20 mb-20 mt-[100px]">
