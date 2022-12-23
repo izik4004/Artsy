@@ -76,7 +76,7 @@ const decreaseQty = (product) => {
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/auctions" element={<Auction />} />
           <Route path="/checkout" element={<PaymentCheckout/>} />
-          <Route path="/livebid" element={<LiveAuction/>} />
+          <Route path="/livebid/:id" element={<LiveAuction/>} />
         </Routes>
         <Footer />
       </Router>

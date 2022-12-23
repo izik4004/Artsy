@@ -1,18 +1,26 @@
-import React from "react";
+import {useState} from "react";
 import image from "../../assets/auction2.png";
+import { auction } from "../../data/auction";
+import { useParams } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { AiFillHeart } from "react-icons/ai";
 import {RiSendPlaneFill} from "react-icons/ri"
+import Name from "../../components/Name";
 
 const LiveAuction = () => {
+  const [open, setOpen] = useState(false)
+  const { id } = useParams();
+  const { products } = auction;
+  const singleAuction = products.find((item) => item.id === id);
   return (
     <section className="mt-[180px] container mx-auto">
       <div className="lg:flex border">
         <div className="relative">
-          <img src={image} alt="" className="h=[700px]" />
+          <img src={singleAuction.url} alt="" className="h-[700px] w-[550px]" />
         </div>
-        <div className="lg:flex-start lg:border-l-2">
-          <div className="px-6">
+        <div className="lg:flex-start lg:border-l-2 justify-between px-6 py-4">
+          <div className="h-3/4">uoioieoeoi</div>
+          <div className="">
             <div className="flex gap-4 items-center py-2">
               <img
                 className="inline-block h-10 w-10 rounded-full object-cover ring-2 ring-white"
@@ -24,7 +32,7 @@ const LiveAuction = () => {
                 <p className="text-base py-1">$5000</p>
               </div>
             </div>
-            <span className="pt-4 text-base">Creator: jkkljlk</span>
+            <span className="pt-4 text-base h-1/4" onClick={() => setOpen(true)}>Creator: jkkljlk</span>
             <div className="flex gap-6 py-2">
               <div className="flex items-center">
                 <input
@@ -32,6 +40,11 @@ const LiveAuction = () => {
                   name=""
                   className="border rounded-xl py-1 px-4"
                   placeholder="Place a bid..."
+                  onClick={() =>
+                    localStorage.getItem("name") === "" &&
+                    setOpen(true)
+                  }
+                  
                 />
                 <RiSendPlaneFill size={18} className="-ml-8 cursor-pointer" />
               </div>
@@ -39,6 +52,9 @@ const LiveAuction = () => {
                 <AiFillHeart size={18} color="red" className="cursor-pointer"/>
               </div>
             </div>
+            {open === true &&
+            <Name setOpen={setOpen}/>
+            }
           </div>
         </div>
       </div>

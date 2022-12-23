@@ -11,10 +11,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 
-
-
 const Auction = () => {
-  const {bids, products} = auction
+  const { bids, products } = auction;
   return (
     <section className="container mx-auto mt-[100px]">
       <div className="py-10">
@@ -22,32 +20,25 @@ const Auction = () => {
           Here’s an overview of products actively on auction, explore!
         </h4>
       </div>
-      <div className="py-6 ">
+      <div className="py-6 flex  ">
+        <Swiper
+          slidesPerView={2.5}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
         
-           <Swiper
-           spaceBetween={30}
-           centeredSlides={true}
-           autoplay={{
-             delay: 2500,
-             disableOnInteraction: false,
-           }}
-           pagination={{
-             clickable: true,
-           }}
-           navigation={true}
-           modules={[Autoplay, Pagination, Navigation]}
-           className="mySwiper"
-         >
-          
-           <SwiperSlide> 
-           {products.map((item, index) => (
-            <AuctionImageCard id={item.id} key={index} image={item.url}/>
+            {products.map((item, index) => (
+                <SwiperSlide className="flex gap-4" key={index}>
+              <AuctionImageCard id={item.id} key={index} image={item.url} />
+              </SwiperSlide>
             ))}
-            </SwiperSlide>
           
-         </Swiper>
-          
-      
+        </Swiper>
+
         {/* <AuctionImageCard /> */}
       </div>
       <h3 className="text-xl py-4">Top bids from popular creators</h3>

@@ -95,8 +95,8 @@ export const footer = {
 };
 
 export const explore = [
-    { name: "Explore marketplace", href: "/#" },
-    { name: "See Auctions", href: "/#" },
+    { name: "Explore marketplace", href: "/marketplace" },
+    { name: "See Auctions", href: "/auctions" },
 ]
 
 export const topCreators = {
