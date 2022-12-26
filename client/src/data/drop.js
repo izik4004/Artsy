@@ -1,7 +1,7 @@
 export const drop =
 [
     {
-      "id": "d1",
+      "id": "1",
       "title": "eyo: eko for show",
       "creator": "aliya minat",
       "date": {
@@ -14,7 +14,7 @@ export const drop =
       "desc": "This vibrant and dynamic piece captures the energy and spirit of Lagos, the bustling commercial capital of Nigeria. The colorful palette and bold brushstrokes reflect the city's vibrant arts scene, while the intricate patterns and designs pay homage to the rich cultural heritage of the Yoruba people."
     },
     {
-      "id": "d2",
+      "id": "2",
       "title": "ginger suburbs",
       "creator": "ayomide basit",
       "date": {
@@ -27,7 +27,7 @@ export const drop =
       "desc": "This artwork captures the quintessential beauty and tranquility of suburban living. The composition is dominated by rows of neat, colorful houses nestled in green lawns and framed by tall trees. The sky is a brilliant blue, with fluffy clouds floating lazily overhead. In the distance, a church steeple and a water tower rise above the rooftops, adding a touch of nostalgia and charm to the scene."
     },
     {
-      "id": "d3",
+      "id": "3",
       "title": "sink",
       "creator": "elizbeth basit",
       "date": {
@@ -40,7 +40,7 @@ export const drop =
       "desc": "In this powerful and striking piece, a lone hand emerges from the tumultuous waves of the ocean, its fingers grasping at the air as if seeking help or salvation. The hand is rendered in great detail, with every wrinkle and vein visible, conveying a sense of desperation and vulnerability."
     },
     {
-      "id": "d4",
+      "id": "4",
       "title": "warped '99",
       "creator": "john traversy",
       "date": {
