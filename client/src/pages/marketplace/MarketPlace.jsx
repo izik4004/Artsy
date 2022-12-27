@@ -9,10 +9,17 @@ import MarketItem from "../../components/MarketItem";
 const MarketPlace = () => {
   const [search, setSearch] = useState("")
   const [openDropDown, setOpenDropDown] = useState(true)
-
+const [data, setData] = useState(products)
   // const {featured_products, products} = product
   // console.log("prod", products)
-  // const filterByCategory = 
+  const filterByCategory = (catItem) => {
+    const result = products.filter((item) => {
+      return item.category === catItem;
+    })
+    setData(result)
+  }
+
+  const fashionProducts = products.filter((data) => data.category === category);
   return (
     <section className="container mx-auto flex flex-col gap-10  lg:py-20 mb-20 mt-[100px]">
       <h4 className="lg:hidden">See 1-6 of 15 results</h4>
@@ -53,7 +60,8 @@ const MarketPlace = () => {
                 <option value="Cherry">Cherry</option>
               </select>
             </div>
-          </div>
+          </div> 
+
         </div>
       </div>
 
@@ -74,7 +82,7 @@ const MarketPlace = () => {
           <>
             {category.map((item, index) => (
               <span className="flex gap-4 pb-4" key={index}>
-                <input type="checkbox" />
+                <input type="checkbox" onClick={() => fashionProducts(item)}/>
                 <label>{item}</label>
               </span>
             ))}
@@ -106,7 +114,7 @@ const MarketPlace = () => {
         </div>
         <div className="lg:w-4/5">
           <div className="flex flex-wrap">
-            {products.filter((item) => {
+            {data.filter((item) => {
                return search.toLowerCase() === '' ? item : item.name
                .toLowerCase().includes(search)
             }).map((item) => (
