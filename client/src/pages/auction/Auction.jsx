@@ -21,26 +21,28 @@ const Auction = () => {
         </h4>
       </div>
       <div className="py-6 flex  ">
-        <Swiper
-          slidesPerView={2.5}
+      <Swiper
+          slidesPerView={3}
           spaceBetween={30}
           pagination={{
-            clickable: true,
+            dynamicBullets: true,
           }}
           modules={[Pagination]}
           className="mySwiper"
         >
-        
-            {products.map((item, index) => (
-                <SwiperSlide className="flex gap-4" key={index}>
-              <AuctionImageCard id={item.id} key={index} image={item.url} />
-              </SwiperSlide>
-            ))}
-          
+          {products.map((item, index) => {
+            return (
+              <div key={item.id}>
+                <SwiperSlide key={index} className="flex gap-4">
+                <AuctionImageCard id={item.id} key={index} image={item.url} />
+                </SwiperSlide>
+              </div>
+            );
+          })}
         </Swiper>
-
-        {/* <AuctionImageCard /> */}
       </div>
+
+      
       <h3 className="text-xl py-4">Top bids from popular creators</h3>
       <div className="flex gap-10 mb-20 flex-col lg:flex-row">
         {bids.map((item, index) => (

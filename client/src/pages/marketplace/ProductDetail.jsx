@@ -12,6 +12,7 @@ import { useParams } from "react-router-dom";
 import { products } from "../../data/data";
 import { CartContext } from "../../context/ShopContext";
 import { useContext } from "react";
+import Breadcrumb from "../../components/BreadCrumb";
 
 export const ProductDetail = () => {
   const { id } = useParams();
@@ -23,6 +24,7 @@ export const ProductDetail = () => {
 
   return (
     <section className="container mx-auto mb-20 mt-[180px]">
+      <Breadcrumb/>
       {/* <div className="my-14">hi</div> */}
       <div className="flex border h-1/2 flex-col lg:flex-row">
         <div className="border-r lg:w-1/2 ;">

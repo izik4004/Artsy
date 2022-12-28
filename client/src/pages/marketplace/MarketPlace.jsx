@@ -22,6 +22,7 @@ const [data, setData] = useState(products)
   const fashionProducts = products.filter((data) => data.category === category);
   return (
     <section className="container mx-auto flex flex-col gap-10  lg:py-20 mb-20 mt-[100px]">
+       
       <h4 className="lg:hidden">See 1-6 of 15 results</h4>
       <div className="flex gap-14 items-center">
         <div className="lg:w-1/5 py-4 hidden lg:block">

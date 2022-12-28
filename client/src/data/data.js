@@ -2,7 +2,7 @@ import FeaturedImage3 from "../assets/FeaturedProduct1.png";
 import FeaturedImage2 from "../assets/FeaturedProduct2.png";
 import FeaturedImage1 from "../assets/FeaturedProduct3.png";
 import UpcomingImage from "../assets/Upcomingsection.png";
-import CreatorsImage from "../assets/CreatorsImage1.png"
+// import CreatorsImage from "../assets/CreatorsImage1.png"
 import Product1 from "../assets/item1.png"
 import Product2 from "../assets/item2.png"
 import Product3 from "../assets/item3.png"
@@ -109,7 +109,7 @@ export const topCreators = {
       ],
     subtitle:
       "Everything always looked better in black and white. Everything always  as if it were the first time; there’s always more people in a black and white photograph. It just makes it seem that there were more people at a gig, more people at a football match, than with colour photography. Everything looks more exciting. Jack Lowden",
-    image: CreatorsImage,
+    // image: CreatorsImage,
   };
 
   export const category = ["Editorial", "Fashion", "Optics", "Arts & Museum", "Nature"  ];
