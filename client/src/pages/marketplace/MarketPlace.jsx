@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import { category, price, products } from "../../data/data";
 import { ImEqualizer } from "react-icons/im";
 import { RxCaretUp, RxCaretDown } from "react-icons/rx";
@@ -7,22 +7,63 @@ import MarketItem from "../../components/MarketItem";
 // import { product } from "../../data/product";
 
 const MarketPlace = () => {
-  const [search, setSearch] = useState("")
-  const [openDropDown, setOpenDropDown] = useState(true)
-const [data, setData] = useState(products)
-  // const {featured_products, products} = product
-  // console.log("prod", products)
-  const filterByCategory = (catItem) => {
-    const result = products.filter((item) => {
-      return item.category === catItem;
-    })
-    setData(result)
+  const [search, setSearch] = useState("");
+  const [openDropDown, setOpenDropDown] = useState(true);
+
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [sortBy, setSortBy] = useState("name");
+
+  const handleCategoryChange = (event) => {
+    const { value, checked } = event.target;
+    if (checked) {
+      setSelectedCategories([...selectedCategories, value]);
+    } else {
+      setSelectedCategories(selectedCategories.filter((c) => c !== value));
+    }
+  };
+
+  const handleSortChange = (event) => {
+    setSortBy(event.target.value);
+  };
+
+  const categories = [...new Set(products.map((p) => p.category))];
+  let filteredProducts = products;
+
+  if (selectedCategories.length > 0) {
+    filteredProducts = filteredProducts.filter((product) => {
+      return selectedCategories.some((c) => c === product.category);
+    });
   }
 
-  const fashionProducts = products.filter((data) => data.category === category);
+  if (sortBy === "price") {
+    filteredProducts.sort((a, b) => a.price - b.price);
+  } else if (sortBy === "name") {
+    filteredProducts.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    });
+  }
+
+  const [priceRange, setPriceRange] = useState({ min: 0, max: 5000 });
+
+  const handlePriceRangeChange = (event) => {
+    const { name, value } = event.target;
+    setPriceRange({ ...priceRange, [name]: value });
+  };
+
+  if (priceRange.max < 1000) {
+    filteredProducts = products.filter(
+      (product) =>
+        product.price >= priceRange.min && product.price <= priceRange.max
+    );
+  }
   return (
     <section className="container mx-auto flex flex-col gap-10  lg:py-20 mb-20 mt-[100px]">
-       
       <h4 className="lg:hidden">See 1-6 of 15 results</h4>
       <div className="flex gap-14 items-center">
         <div className="lg:w-1/5 py-4 hidden lg:block">
@@ -52,17 +93,16 @@ const [data, setData] = useState(products)
             </span>
 
             <div className="">
-              <select className="lg:border  lg:rounded-md py-2 px-4  ">
+              <select className="lg:border  lg:rounded-md py-2 px-4 " value={sortBy} onChange={handleSortChange}>
                 buy
                 <option value="Orange" className="py-4">
                   Sort by
                 </option>
-                <option value="Radish">Radish</option>
-                <option value="Cherry">Cherry</option>
+                <option value="name">Name</option>
+                <option value="price">Price</option>
               </select>
             </div>
-          </div> 
-
+          </div>
         </div>
       </div>
 
@@ -74,28 +114,50 @@ const [data, setData] = useState(products)
           </div>
           <div className="py-8 flex justify-between items-center">
             <span className="font-semibold">By category</span>
-            {openDropDown === true ?
-            <RxCaretUp size={24} onClick={() => setOpenDropDown(false)} className="cursor-pointer"/>
-            
-            : <RxCaretDown size={24} onClick={() => setOpenDropDown(true)} className="cursor-pointer"/> }
+            {openDropDown === true ? (
+              <RxCaretUp
+                size={24}
+                onClick={() => setOpenDropDown(false)}
+                className="cursor-pointer"
+              />
+            ) : (
+              <RxCaretDown
+                size={24}
+                onClick={() => setOpenDropDown(true)}
+                className="cursor-pointer"
+              />
+            )}
           </div>
-          {openDropDown === true ?
-          <>
-            {category.map((item, index) => (
-              <span className="flex gap-4 pb-4" key={index}>
-                <input type="checkbox" onClick={() => fashionProducts(item)}/>
-                <label>{item}</label>
-              </span>
-            ))}
-          </>
-        :<></>}
+          {openDropDown === true ? (
+            <>
+              {categories.map((item, index) => (
+                <span className="flex gap-4 pb-4" key={index}>
+                  <input
+                    type="checkbox"
+                    value={item}
+                    onChange={handleCategoryChange}
+                  />
+                  <label>{item}</label>
+                </span>
+              ))}
+            </>
+          ) : (
+            <></>
+          )}
           <div className="py-6 flex justify-between items-center">
             <span className="font-semibold">By price</span>
             <RxCaretUp size={24} />
             {/* <RxCaretDown/> */}
           </div>
           <span>$20000 - $50000</span>
-
+          <input
+            type="range"
+            min={priceRange.min}
+            max={priceRange.max}
+            step="50"
+            value={priceRange.max}
+            onChange={handlePriceRangeChange}
+          />
           <div className="py-6 flex justify-between items-center">
             <span className="font-semibold">By artist</span>
             <RxCaretUp size={24} />
@@ -104,7 +166,7 @@ const [data, setData] = useState(products)
           {price.map((item, index) => (
             <span className="flex gap-4 pb-4" key={index}>
               <input type="radio" />
-              <label>{item}</label>
+              <label className="text-titlecase">{item}</label>
             </span>
           ))}
           <div className="py-6 flex justify-between items-center">
@@ -115,19 +177,22 @@ const [data, setData] = useState(products)
         </div>
         <div className="lg:w-4/5">
           <div className="flex flex-wrap">
-            {data.filter((item) => {
-               return search.toLowerCase() === '' ? item : item.name
-               .toLowerCase().includes(search)
-            }).map((item) => (
-              <div className="lg:w-1/3 lg:p-4 w-full" key={item.id}>
-                <MarketItem
-                  image={item.image}
-                  name={item.name}
-                  price={item.price}
-                  id={item.id}
-                />
-              </div>
-            ))}
+            {filteredProducts
+              .filter((item) => {
+                return search.toLowerCase() === ""
+                  ? item
+                  : item.name.toLowerCase().includes(search);
+              })
+              .map((item) => (
+                <div className="lg:w-1/3 lg:p-4 w-full" key={item.id}>
+                  <MarketItem
+                    image={item.image}
+                    name={item.name}
+                    price={item.price}
+                    id={item.id}
+                  />
+                </div>
+              ))}
           </div>
         </div>
       </div>

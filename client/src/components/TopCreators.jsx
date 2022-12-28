@@ -21,14 +21,8 @@ const TopCreators = () => {
       <p className="container mb-6 lg:pr-20 mx-auto lg:py-14 text-sm lg:text-xl tracking-wider lg:leading-9">
         {subtitle}
       </p>
-      <div className="-mt-20">
       <FadingImage/>
-      </div>
-      {/* <img
-        src={image}
-        alt=""
-        className="absolute top-32 left-1/2 right-0 w-1/3"
-      /> */}
+     
     </section>
   );
 };

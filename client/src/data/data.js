@@ -112,17 +112,16 @@ export const topCreators = {
     // image: CreatorsImage,
   };
 
-  export const category = ["Editorial", "Fashion", "Optics", "Arts & Museum", "Nature"  ];
-
+  
   export const price = ["All", "Below $100,00", "$100.00 - $150.00", "$150.00 - $200.00", "Above $200.00"  ];
 
   export const products = [
     {
         id:1,
         name: "PHILOMENA '22",
-        price: 3.90,
+        price: 1.90,
         image: Product1,
-        category:"fashion",
+        category:"Fashion",
         subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
        FeaturedImage1: FeaturedImage1,
@@ -132,17 +131,17 @@ export const topCreators = {
         name: "BOOLEAN EGYPTIAN",
         price: 3.90,
         image: Product2,
-        category:"arts",
+        category:"Arts",
         subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
-    image: FeaturedImage1,
+       image: FeaturedImage1,
     },
     {
         id:3,
         name: "BLANC",
-        price: 3.90,
+        price: 2400,
         image: Product3,
-        category:"nature",
+        category:"Nature",
         subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
     image: FeaturedImage1,
@@ -150,43 +149,44 @@ export const topCreators = {
     {
         id:4,
         name: "ELLIPSIA",
-        price: 3.90,
+        price: 6500,
         image: Product4,
-        category:"editorial"
+        category:"Editorial"
     },
     {
         id:5,
         name: "THE LAWMAKERS",
         price: 3.90,
         image: Product5,
-        category:"fashion"
+        category:"Fashion"
     },
     {
         id:6,
         name: "VEIL",
-        price: 3.90,
+        price: 2000,
         image: Product6,
-        category:"nature"
+        category:"Nature"
     },
     {
         id:7,
         name: "ALTERNATING",
-        price: 3.90,
+        price: 12000,
         image: Product7,
-        category:"editorial"
+        category:"Editorial"
     },
     {
         id:8,
         name: "ROSEMARY '22",
-        price: 3.90,
+        price: 7000,
         image: Product8,
-        category:"art"
+        category:"Arts"
     },
     {
         id:9,
         name: "BEVERLY",
-        price: 3.90,
-        image: Product9
+        price: 5000,
+        image: Product9,
+        category:"Arts"
     },
   ]
 
