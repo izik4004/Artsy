@@ -23,7 +23,7 @@ export const ProductDetail = () => {
   const productQty = cart.getItemQuantity(singleProduct.id);
 
   return (
-    <section className="container mx-auto mb-20 mt-[180px]">
+    <section className="container mx-auto mb-20 mt-[100px]">
       <Breadcrumb/>
       {/* <div className="my-14">hi</div> */}
       <div className="flex border h-1/2 flex-col lg:flex-row">

@@ -23,12 +23,12 @@ const Auction = () => {
       <div className="py-6 flex  ">
       <Swiper
           slidesPerView={3}
-          spaceBetween={30}
+          spaceBetween={10}
           pagination={{
             dynamicBullets: true,
           }}
           modules={[Pagination]}
-          className="mySwiper"
+         className="mt-10 cursor-pointer"
         >
           {products.map((item, index) => {
             return (

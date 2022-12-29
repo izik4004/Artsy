@@ -9,7 +9,7 @@ import MarketItem from "../../components/MarketItem";
 const MarketPlace = () => {
   const [search, setSearch] = useState("");
   const [openDropDown, setOpenDropDown] = useState(true);
-
+  const [priceRange, setPriceRange] = useState({ min: 0, max: 5000 });
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [sortBy, setSortBy] = useState("name");
 
@@ -49,8 +49,6 @@ const MarketPlace = () => {
     });
   }
 
-  const [priceRange, setPriceRange] = useState({ min: 0, max: 5000 });
-
   const handlePriceRangeChange = (event) => {
     const { name, value } = event.target;
     setPriceRange({ ...priceRange, [name]: value });
@@ -83,17 +81,28 @@ const MarketPlace = () => {
             {/* mobile view for filter */}
             <span className="block md:hidden">
               <select className=" py-2 px-2  ">
-                buy
-                <option value="Orange" className="py-4">
+                <option value="" className="py-4">
                   Filter by
                 </option>
-                <option value="Radish">Radish</option>
-                <option value="Cherry">Cherry</option>
+                {categories.map((item, index) => (
+                  <option
+                    key={index}
+                    // type="checkbox"
+                    value={item}
+                    onChange={handleCategoryChange}
+                  >
+                    {item}
+                  </option>
+                ))}
               </select>
             </span>
 
             <div className="">
-              <select className="lg:border  lg:rounded-md py-2 px-4 " value={sortBy} onChange={handleSortChange}>
+              <select
+                className="lg:border  lg:rounded-md py-2 px-4 "
+                value={sortBy}
+                onChange={handleSortChange}
+              >
                 buy
                 <option value="Orange" className="py-4">
                   Sort by
@@ -201,7 +210,7 @@ const MarketPlace = () => {
           See more
         </button>
       </div>
-      <div className="hidden gap-4 md:flex items-center justify-contents-end">
+      <div className="lg:hidden gap-4 flex items-center justify-center">
         <span>Load more</span>
         <span className="border p-4 rounded-full">
           <FaArrowRight size={24} />

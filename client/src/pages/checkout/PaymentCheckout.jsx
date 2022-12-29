@@ -1,11 +1,10 @@
 import { useState } from "react";
-import Sum from "../../components/Sum";
-import CheckoutItem from "./CheckoutItem";
 import PaymentDetails from "./PaymentDetails";
 import ShippingDetails from "./ShippingDetails";
 import ShoppingCart from "./ShoppingCart";
 import { CartContext } from "../../context/ShopContext";
 import { useContext } from "react";
+import Breadcrumb from "../../components/BreadCrumb";
 
 
 const PaymentCheckout = () => {
@@ -14,6 +13,7 @@ const PaymentCheckout = () => {
   console.log("me", cart.items)
   return (
     <section className="container mx-auto mt-[100px]">
+      <Breadcrumb/>
       <div className="px-5 lg:py-14 py-6 mx-auto flex flex-wrap flex-col">
         <div className="hidden lg:flex mx-auto flex-wrap">
           <a
@@ -60,10 +60,10 @@ const PaymentCheckout = () => {
       {cart.items === 0 ? (
         <h1 className="no-items product">No Items are add in Cart</h1>
       ) : (
-        <>{openTab === 1 && <ShoppingCart cart={cart}/>}</>
+        <>{openTab === 1 && <ShoppingCart cart={cart} setOpenTab={setOpenTab}/>}</>
       )}
-      {openTab === 2 && <ShippingDetails cart={cart}/>}
-      {openTab === 3 && <PaymentDetails />}
+      {openTab === 2 && <ShippingDetails cart={cart} setOpenTab={setOpenTab}/>}
+      {openTab === 3 && <PaymentDetails setOpenTab={setOpenTab} />}
     </section>
   );
 };

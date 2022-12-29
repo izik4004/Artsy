@@ -5,7 +5,7 @@ const MarketItem = ({image, name, price, id}) => {
   const navigate = useNavigate();
   return (
     <div   onClick={() =>
-      navigate(`/products/${id}`)
+      navigate(`/marketplace/${id}`)
     }
     className='p-2 lg:shadow-md cursor-pointer lg:rounded-md flex flex-col justify-between'>
         <img src={image} alt="" className='h-[200px]' />
