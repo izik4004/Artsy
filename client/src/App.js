@@ -18,6 +18,7 @@ import LiveAuction from "./pages/auction/LiveAuction";
 import io from "socket.io-client"
 import ShippingDetails from "./pages/checkout/ShippingDetails";
 import PaymentDetails from "./pages/checkout/PaymentDetails";
+import ThankYouPage from "./pages/ThankYouPage";
 
 function App() {
 const socket = io.connect("http://localhost:3001");
@@ -36,11 +37,11 @@ const socket = io.connect("http://localhost:3001");
           path="/marketplace/:id" element={<ProductDetail />} />
           <Route path="/auctions" element={<Auction />} />
           <Route path="/checkout" element={<PaymentCheckout/>} />
-          <Route path="/shipping-details" element={<ShippingDetails/>} />
-          <Route path="/payment-details" element={<PaymentDetails/>} />
           <Route path="/livebid/:id" element={<LiveAuction socket={socket}/>} />
+          <Route path="/payment-details" element={<PaymentDetails/>} />
+          <Route path="/thankyou" element={<ThankYouPage/>} />
         </Routes>
-        <Footer />
+       
       </Router>
       </ShopProvider>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Explore from '../../components/Explore'
 import FeaturedProduct from '../../components/FeaturedProduct'
+import Footer from '../../components/Footer'
 import Hero from '../../components/Hero'
 import ImageSlider from '../../components/ImageSlider'
 import Newsletter from '../../components/Newsletter'
@@ -17,6 +18,7 @@ const Homepage = () => {
         <Explore/>
         <TopCreators/>
         <Newsletter/>
+        <Footer/>
     </div>
   )
 }

@@ -1,8 +1,18 @@
 import React from "react";
 import Sum from "../../components/Sum";
 import { Link } from "react-router-dom";
+import { handlePayment } from "../../paystack";
+import { CartContext } from "../../context/ShopContext";
+import { useContext } from "react";
 
 const PaymentDetails = () => {
+  const cart = useContext(CartContext);
+  const email = JSON.parse(localStorage.getItem('formObject')); 
+  const amount = cart.getTotalCost().toFixed(2)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handlePayment(email.email, amount)
+  }
   return (
     <div className=" flex flex-col mb-20">
       <div className="flex justify-between lg:mb-8">
@@ -73,7 +83,7 @@ const PaymentDetails = () => {
             </div>
           </div>
           <span className="flex flex-col gap-2 py-6 ">
-            <button className="py-6 px-20 text-white bg-[#3341C1]">
+            <button className="py-6 px-20 text-white bg-[#3341C1]" onClick={handleSubmit}>
               Confirm
             </button>
             <Link to="/marketplace" className="text-blue text-center px-20 py-6 underline">Continue shopping</Link>
