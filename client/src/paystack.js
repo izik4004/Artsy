@@ -3,18 +3,18 @@ import { redirect } from "react-router-dom";
 
 export const handlePayment = (email, amount) => {
   const handler = PaystackPop.setup({
-    key: process.env.PAYSTACK_KEY, // Replace with your public key
+    key: "pk_test_9ef3632a2131e9b22e8714e4cb03fef30fb146eb", // Replace with your public key
     email,
     amount: amount * 100,
     onClose: () => {
-      // alert('Window closed.');
-      return redirect("/thankyou");
+      alert('Window closed.');
+      
     },
-    callback: (response) => {
-      const message = 'Payment complete! Reference: ' + response.reference;
-      alert(message);
+    callback: () => {
+       window.location =  redirect("/thankyou");    
     }
   });
+  
   handler.openIframe();
- 
+  
 }

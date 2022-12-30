@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { handlePayment } from "../../paystack";
 import { CartContext } from "../../context/ShopContext";
 import { useContext } from "react";
+import { redirect } from "react-router-dom";
 
 const PaymentDetails = () => {
   const cart = useContext(CartContext);
