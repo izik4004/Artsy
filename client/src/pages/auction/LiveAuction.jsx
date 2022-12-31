@@ -43,15 +43,15 @@ const LiveAuction = ({ socket }) => {
   const username = localStorage.getItem("name");
 
   return (
-    <section className="text-gray-600 body-font overflow-hidden mt-[180px] ">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="border mx-auto flex flex-wrap">
+    <section className="text-gray-600 body-font overflow-hidden mt-[120px] ">
+      <div className="container px-5 lg:py-24 mx-auto">
+        <div className="relative border mx-auto lg:flex flex-wrap">
           <img
             alt="ecommerce"
-            className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+            className="lg:w-1/2 w-full lg:h-auto h-full object-cover object-center rounded"
             src={singleAuction.url}
           />
-          <div className="lg:w-1/2 w-full lg:px-10 lg:py-6 mt-6 lg:mt-0 flex flex-col ">
+          <div className="absolute lg:relative px-4 lg:bottom-0 bottom-10 lg:w-1/2 w-full lg:px-10 lg:py-6 mt-6 lg:mt-0 flex flex-col ">
             <div className="h-5/6 overflow-y scroll">
               {messageList.map((messageContent) => (
                 <div className="flex gap-6 items-center py-2">
@@ -61,15 +61,15 @@ const LiveAuction = ({ socket }) => {
                     alt="Charles"
                   />
                   <div>
-                    <h3 className="text-lg">{username}</h3>
-                    <p className="text-base py-1">{messageContent.message}</p>
+                    <h3 className="text-lg lg:text-black text-white">{username}</h3>
+                    <p className="text-base py-1 lg:text-black text-white">{messageContent.message}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="h-1/6">
-              <span className="pt-4 text-base h-1/4">Creator: jkkljlk</span>
+            <div className="h-1/6 pt-4">
+              <span className="pt-4 text-base h-1/4 lg:text-black text-white">Creator: jkkljlk</span>
 
               {username === "" ? (
                 <div className="py-4">
@@ -111,7 +111,7 @@ const LiveAuction = ({ socket }) => {
             {open === true && <Name setOpen={setOpen} />}
           </div>
         </div>
-        <div className="py-10 flex items-center gap-6">
+        <div className="lg:py-10 flex items-center gap-6 py-6">
           <h3 className="text-xl">See upcoming drops</h3>
           <span className="border p-3 rounded-full">
             <Link to={"/drop"}>

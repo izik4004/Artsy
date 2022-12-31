@@ -19,7 +19,7 @@ export const auction =
     ],
     "bids": [
       {
-        "id": "ab1",
+        "id": "6",
         "name": "out of the box",
         "creator": "dan murray",
         "date": {
@@ -38,7 +38,7 @@ export const auction =
         "url": "https://images.unsplash.com/photo-1622737133809-d95047b9e673?crop=entropy&cs=tinysrgb&fm=jpg&ixid=Mnw3MjAxN3wwfDF8c2VhcmNofDE1fHxhcnR8ZW58MHx8fHwxNjY3NTIyODQ5&ixlib=rb-4.0.3&q=80&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450"
       },
       {
-        "id": "ab1",
+        "id": "7",
         "name": "falling apart",
         "creator": "jacob banks",
         "date": {

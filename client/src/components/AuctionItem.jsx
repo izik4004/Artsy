@@ -1,7 +1,9 @@
 import React from 'react'
 import {BsSuitHeart} from "react-icons/bs"
+import { useNavigate } from 'react-router-dom';
 
 const AuctionItem = (props) => {
+  const navigate = useNavigate();
   return (
     <div className=' lg:w-1/3'>
        <div className="border rounded-lg flex flex-col py-4">
@@ -34,7 +36,7 @@ const AuctionItem = (props) => {
         <span>Current bid</span>
         <span>{props.currentbid}</span>
       </div>
-      <button className='bg-blue px-12 text-white '>Place bid</button>
+      <button className='bg-blue px-12 text-white' onClick={() => navigate(`/livebid/${props.id}`)}>Place bid</button>
     </div>
     </div>
   )

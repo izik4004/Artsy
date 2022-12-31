@@ -12,12 +12,14 @@ const Featured = ({ title, subtitle, image, id }) => {
     >
        <div class="lg:w-1/2 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
       <div class="h-84">
-        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src={image} alt="" />
+        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src={image} alt="" 
+         onClick={() => navigate(`/marketplace/${id}`) }
+        />
       </div>
       <div class="  absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
       <div class="absolute inset-3 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
         <h1 class="mb-3 py-8 text-3xl font-bold  text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 cursor-pointer"  onClick={navigate(`/products/${id}`)}>{title}</h1>
-        <div className="border p-4 rounded-full ">
+        <div className="border p-4 rounded-full "  onClick={() => navigate(`/marketplace/${id}`) }>
             <BsArrowRight size={24}  className="text-white"/>
           </div>
         
@@ -52,7 +54,7 @@ const Featured = ({ title, subtitle, image, id }) => {
               <span className="pl-10">64 major creators</span>
           </div>
         
-          <div className="border p-4 rounded-full hidden lg:block">
+          <div className="border p-4 rounded-full hidden lg:block cursor-pointer"  onClick={() => navigate(`/marketplace/${id}`) }>
             <BsArrowRight size={24} />
           </div>
         </div>

@@ -11,7 +11,7 @@ export const handlePayment = (email, amount) => {
       
     },
     callback: () => {
-       window.location =  redirect("/thankyou");    
+       window.location = "/thankyou";    
     }
   });
   

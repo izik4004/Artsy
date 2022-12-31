@@ -17,6 +17,7 @@ const AuctionImageCard = (props) => {
         />
         <motion.div className="w-3/4 absolute border bottom-6 px-6 text-white py-2 text-center  flex justify-center bg-white bg-opacity-20 rounded-lg">
           <h4 className="text-white">{props.id}</h4>
+          <p>6hr: 40mins: 15s</p>
         </motion.div>
       </motion.div>
     </motion.div>

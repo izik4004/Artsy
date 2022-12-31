@@ -39,13 +39,14 @@ export const hero = {
 export const carousel = [Slider1, Slider2, Slider3, Slider4, Slider5]
 export const features = {
   feature1: {
-    id:"1",
+    id:"2",
     title: "The Boolean Egyptian",
     subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
     image: FeaturedImage1,
   },
   feature2: {
+    id:"4",
     pretitle: "Free some cost",
     title: "Save cost for you and family",
     subtitle:
@@ -54,6 +55,7 @@ export const features = {
     image: FeaturedImage2,
   },
   feature3: {
+    id:"3",
     pretitle: "Use anytime",
     title: "Use anytime when you need",
     subtitle:
@@ -124,7 +126,7 @@ export const topCreators = {
         category:"Fashion",
         subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
-       FeaturedImage1: FeaturedImage1,
+      
     },
     {
         id:2,
@@ -134,23 +136,21 @@ export const topCreators = {
         category:"Arts",
         subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
-       image: FeaturedImage1,
     },
     {
         id:3,
         name: "BLANC",
         price: 2400,
-        image: Product3,
+        image: FeaturedImage3,
         category:"Nature",
         subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
-    image: FeaturedImage1,
     },
     {
         id:4,
         name: "ELLIPSIA",
         price: 6500,
-        image: Product4,
+        image: FeaturedImage2,
         category:"Editorial"
     },
     {
