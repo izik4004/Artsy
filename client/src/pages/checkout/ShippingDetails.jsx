@@ -65,8 +65,8 @@ const ShippingDetails = ({cart, setOpenTab}) => {
             <label>Choose a wallet</label>
             <select className="border bg-grey rounded-md py-4 px-4">
               <option value="Orange" className="py-4"></option>
-              <option value="Radish">Radish</option>
-              <option value="Cherry">Cherry</option>
+              <option value="Radish">Metamask</option>
+              <option value="Cherry">ConnectWallet</option>
             </select>
           </span>
           <span className="flex flex-col gap-2 py-4">
@@ -75,7 +75,7 @@ const ShippingDetails = ({cart, setOpenTab}) => {
             <select className="border bg-grey rounded-md py-4 px-4">
               <option value="Orange" className="py-4"></option>
               <option value="Radish">Lagos</option>
-              <option value="Cherry">Cherry</option>
+              <option value="Cherry">Abuja</option>
             </select>
           </span>
 
@@ -85,8 +85,8 @@ const ShippingDetails = ({cart, setOpenTab}) => {
               <label>Country</label>
               <select className="border bg-grey rounded-md py-4 px-4 ">
                 <option value="Orange" className="py-4"></option>
-                <option value="Radish">Radish</option>
-                <option value="Cherry">Cherry</option>
+                <option value="Radish">Nigeria</option>
+                <option value="Cherry">Germany</option>
               </select>
             </span>
 
@@ -95,8 +95,8 @@ const ShippingDetails = ({cart, setOpenTab}) => {
               <label>Postal code</label>
               <select className="border bg-grey rounded-md py-4 px-4 ">
                 <option value="Orange"></option>
-                <option value="Radish">Radish</option>
-                <option value="Cherry">Cherry</option>
+                <option value="Radish">23401</option>
+                <option value="Cherry">10001</option>
               </select>
             </span>
           </div>

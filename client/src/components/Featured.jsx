@@ -1,7 +1,6 @@
 import React from "react";
 import { features } from "../data/data";
 import { BsArrowRight } from "react-icons/bs";
-import {FaArrowRight} from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Featured = ({ title, subtitle, image, id }) => {

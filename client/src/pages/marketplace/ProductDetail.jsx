@@ -6,7 +6,7 @@ import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
-import image from "../../assets/productDetail.png";
+import { useNavigate } from "react-router-dom";
 import CollectionCard from "../../components/CollectionCard";
 import { useParams } from "react-router-dom";
 import { products } from "../../data/data";
@@ -15,16 +15,17 @@ import { useContext } from "react";
 import Breadcrumb from "../../components/BreadCrumb";
 
 export const ProductDetail = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const cart = useContext(CartContext);
- 
+
   const singleProduct = products.find((product) => product.id === parseInt(id));
 
   const productQty = cart.getItemQuantity(singleProduct.id);
 
   return (
     <section className="container mx-auto mb-20 mt-[100px]">
-      <Breadcrumb/>
+      <Breadcrumb />
       {/* <div className="my-14">hi</div> */}
       <div className="flex border h-1/2 flex-col lg:flex-row">
         <div className="border-r lg:w-1/2 ;">
@@ -60,12 +61,21 @@ export const ProductDetail = () => {
               />
             </p>
             <div className="flex items-center gap-4 py-4">
-              <button
-                className="px-14 py-4 bg-[#3341C1] text-white tracking-wider"
-                onClick={() => cart.increaseCartQuantity(singleProduct.id)}
-              >
-                Add to cart
-              </button>
+              {productQty <= 0 ? (
+                <button
+                  className="px-14 py-4 bg-[#3341C1] text-white tracking-wider"
+                  onClick={() => cart.increaseCartQuantity(singleProduct.id)}
+                >
+                  Add to cart
+                </button>
+              ) : (
+                <button
+                  className="px-14 py-4 border border-[#3341C1] text-[#3341C1] tracking-wider"
+                  onClick={() => navigate(`/checkout/`)}
+                >
+                  View cart
+                </button>
+              )}
               <div className="border px-6 py-4">
                 <BsSuitHeart size={24} />
               </div>
